@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReciclaLatam.Views.LoginView">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android" Value="0,40,0,0"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <Grid Padding="30" RowSpacing="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <BoxView HeightRequest="10"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Frame>
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Image HorizontalOptions="Center" WidthRequest="500" Source="Logo.png"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="2" WidthRequest="500">
+                <Frame HasShadow="False">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Label>Inicio de sesión</Label>
+                        <Entry x:Name="UserName" Text="{Binding UserName}" TextColor="DarkBlue" Placeholder="Usuario" PlaceholderColor="Gray" HeightRequest="40"/>
+                        <Entry x:Name="Password" Text="{Binding Password}" TextColor="DarkBlue" Placeholder="Contraseña" PlaceholderColor="Gray" HeightRequest="40" IsPassword="True"/>
+                        <Button Command="{Binding LoginCommand}" Text="Iniciar sesión" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Large" BackgroundColor="DarkBlue"/>
+                        <Label HorizontalOptions="Center">Olvide mi contraseña</Label>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Frame HasShadow="False">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Label>Al hacer click en ingresar estas aceptando nuestros Términos y Condiciones</Label>
+                        <Label HorizontalOptions="Center">¿Nuevo usuario?</Label>
+                        <Button Text="Regístrate aquí" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+                
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
