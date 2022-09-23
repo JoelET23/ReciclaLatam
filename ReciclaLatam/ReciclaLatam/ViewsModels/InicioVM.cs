@@ -49,7 +49,7 @@ namespace ReciclaLatam.ViewsModels
                     Id = 6,
                     Nombre = "Nosotros",
                     Imagen = "nosotros.png"
-                },
+                }
             };
         }
     }

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReciclaLatam.Views.VerificarView">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android" Value="10,20,10,0"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <Grid RowSpacing="10" HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" WidthRequest="800" VerticalOptions="Start">
+                <Frame Padding="0">
+                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Start">
+                        <Image Source="back.png">
+                            <!--<Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LoginBack"/>
+                            </Image.GestureRecognizers>-->
+                        </Image>
+                        <Label VerticalOptions="Center">Olvidé mi contraseña</Label>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="1" VerticalOptions="Center">
+                <Frame VerticalOptions="Center">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Image HorizontalOptions="Center" WidthRequest="500" Source="olvide.png"/>
+                        <Label>Revisa tu correo te enviamos un código</Label>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="2" WidthRequest="500" VerticalOptions="Center">
+                <Frame HasShadow="False">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Entry x:Name="UserName" Text="{Binding Codigo}" TextColor="DarkBlue" Placeholder="Copia el Código" PlaceholderColor="Gray" HeightRequest="40"/>
+                        <Button Command="{Binding ValidarCommand}" Text="Solicitar" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Large" BackgroundColor="DarkBlue"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

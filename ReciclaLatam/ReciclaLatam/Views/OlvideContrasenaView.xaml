@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ReciclaLatam"
+             x:Class="ReciclaLatam.Views.OlvideContrasenaView"
+             Background="#FFFFFF">
+    <ContentPage.Content>
+        <Grid RowSpacing="10" HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" VerticalOptions="Start" Margin="0,15,0,0">
+                <Frame Padding="0" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <Image WidthRequest="80" HeightRequest="55" Source="back.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LoginBack"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Style="{StaticResource TituloNav}">Olvidé mi contraseña</Label>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="1" VerticalOptions="Center" Padding="20,0,20,0" Margin="0,40,0,0">
+                <Frame HasShadow="False" VerticalOptions="Center">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Image HorizontalOptions="Center" WidthRequest="224" HeightRequest="160" Source="olvide.png"/>
+                        <Label TextColor="#25333F" FontSize="16" FontFamily="MontserratR" HorizontalOptions="Center" Margin="0,10,0,0">Ingresa tu Email y te ayudaremos.</Label>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="2" WidthRequest="500" VerticalOptions="Center" Padding="20,0,20,0">
+                <Frame HasShadow="False">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <local:RoundedEntry Style="{StaticResource InputForm}" Text="{Binding UserName}" Placeholder="Correo"/>
+                        <Button Style="{StaticResource BtnForm}" Command="{Binding OlvideCommand}" Text="Solicitar"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

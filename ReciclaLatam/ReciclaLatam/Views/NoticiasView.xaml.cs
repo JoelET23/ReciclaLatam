@@ -12,26 +12,29 @@ using Xamarin.Forms.Xaml;
 namespace ReciclaLatam.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class InicioView : ContentPage
+    public partial class NoticiasView : ContentPage
     {
-        public InicioView()
+        public NoticiasView()
         {
             InitializeComponent();
-            BindingContext = new InicioVM();
-            MenuInicioPage.SelectionChanged += MenuInicioChanged;
+            BindingContext = new NoticiaVM();
+
+            NoticiaPage.SelectionChanged += NoticiaPageChanged;
         }
 
-        private void MenuInicioChanged(object sender, SelectionChangedEventArgs e)
+        private void NoticiaPageChanged(object sender, SelectionChangedEventArgs e)
         {
-            var _ItemMenu = e.CurrentSelection;
+            var _ItemNoticia = e.CurrentSelection;
 
-            for(int i=0; i<_ItemMenu.Count; i++)
+            for (int i = 0; i < _ItemNoticia.Count; i++)
             {
-                var _item = _ItemMenu[i] as MenuInicioModels;
-                var NombreMenu = _item.Nombre;
-                var IdMenuItem = _item.Id;
-                //await Navigation.PushAsync(new ManualesView());
-                if (IdMenuItem == 1)
+                var _itemNot = _ItemNoticia[i] as NoticiasModels;
+                var NombreNot = _itemNot.Titulo;
+                var IdNotItem = _itemNot.Id;
+
+                //DisplayAlert("Alerta", "Entra a página detalle", "OK");
+                Application.Current.MainPage = new NoticiasDetalleView();
+                /*if (IdMenuItem == 1)
                 {
                     DisplayAlert("Alerta", "Entra a página de recojo", "OK");
                 }
@@ -45,7 +48,7 @@ namespace ReciclaLatam.Views
                 }
                 else if (NombreMenu == "Noticias")
                 {
-                    Application.Current.MainPage = new NoticiasView();
+                    DisplayAlert("Alerta", "Entra a página de noticias", "OK");
                 }
                 else if (NombreMenu == "Mi info")
                 {
@@ -54,7 +57,7 @@ namespace ReciclaLatam.Views
                 else if (NombreMenu == "Nosotros")
                 {
                     DisplayAlert("Alerta", "Entra a página de nosotros", "OK");
-                }
+                }*/
             }
         }
     }

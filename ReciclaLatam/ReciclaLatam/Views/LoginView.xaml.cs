@@ -20,5 +20,15 @@ namespace ReciclaLatam.Views
             LoginIndex = new LoginVM();
             BindingContext = LoginIndex;
         }
+
+        private void OlvideClave(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new OlvideContrasenaView();
+        }
+
+        private void NuevoUser(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NuevoUsuarioView();
+        }
     }
 }

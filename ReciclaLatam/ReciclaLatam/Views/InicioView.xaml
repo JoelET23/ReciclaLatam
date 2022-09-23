@@ -41,7 +41,7 @@
                         <Frame Padding="0">
                             <StackLayout Orientation="Horizontal" Spacing="5">
                                 <Image HorizontalOptions="Start" Source="User.png"/>
-                                <Label>Hola, Paulina</Label>
+                                <Label FontFamily="MontserratB">Hola, Paulina</Label>
                             </StackLayout>
                         </Frame>
                         <Frame Padding="0" BackgroundColor="#000">
@@ -55,7 +55,7 @@
             </Grid>
 
             <Grid Grid.Row="2">
-                <CollectionView ItemsSource="{Binding MenuInicio}">
+                <CollectionView ItemsSource="{Binding MenuInicio}" SelectionMode="Single" x:Name="MenuInicioPage">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Vertical" Span="2"/>
                     </CollectionView.ItemsLayout>
