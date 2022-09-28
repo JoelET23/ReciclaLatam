@@ -18,7 +18,7 @@ namespace ReciclaLatam.ViewsModels
                 {
                     Id = 1,
                     Titulo = "Manual para la correcta disposicíón",
-                    Descripcion = "Manual para la correcta disposicíón",
+                    Descripcion = "Todo lo que necesitas saber para la correcta segregación de manterial reciclable.",
                     Link = "#",
                     Imagen = "Manual1.png"
                 },

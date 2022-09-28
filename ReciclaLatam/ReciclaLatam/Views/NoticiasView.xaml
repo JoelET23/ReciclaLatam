@@ -1,47 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ReciclaLatam.Views.NoticiasView">
+             x:Class="ReciclaLatam.Views.NoticiasView"
+             BackgroundColor="#FFFFFF">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS, Android" Value="0,0,0,0"/>
         </OnPlatform>
     </ContentPage.Padding>
     <ContentPage.Content>
-        <Grid Padding="15,19,15,19" RowSpacing="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Grid Padding="15,0,15,0" RowSpacing="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" WidthRequest="800">
-                <Frame Padding="0">
-                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Start">
-                        <Label>Noticias</Label>
-                        <Image Source="ajustesInt.png"/>
-                    </StackLayout>
-                </Frame>
+            <Grid Grid.Row="0" VerticalOptions="Start">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                    <Frame Padding="0,20,0,10" HasShadow="False" BackgroundColor="Transparent" WidthRequest="300" HeightRequest="55">
+                        <Label Style="{StaticResource TituloNav}">Noticias</Label>
+                    </Frame>
+                    <Frame Padding="0,20,0,10" HasShadow="False" BackgroundColor="Transparent" WidthRequest="300" HorizontalOptions="End" HeightRequest="55">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                            <Image x:Name="btnisvis" WidthRequest="25" HeightRequest="25" HorizontalOptions="End" Source="ajustesInt.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ConfiguracionTap"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
             </Grid>
             <Grid Grid.Row="1">
-                <CollectionView ItemsSource="{Binding NoticiasCol}" SelectionMode="Single" x:Name="NoticiaPage">
+                <CollectionView ItemsSource="{Binding NoticiasCol}" HeightRequest="660" SelectionMode="Single" x:Name="NoticiaPage">
                     <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical" Span="1"/>
+                        <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="30"/>
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Frame Margin="0,10,10,0">
+                            <Frame Margin="0,10,10,0" Padding="0">
                                 <StackLayout Orientation="Horizontal" Spacing="5">
-                                    <Label Text="{Binding Fecha}"/>
-                                    <StackLayout Orientation="Vertical" Spacing="5">
-                                        <Image Source="{Binding Imagen}"/>
-                                        <Label Text="{Binding Titulo}"/>
-                                        <Label Text="{Binding Descripcion}"/>
-                                    </StackLayout>
-
+                                    <Frame HasShadow="False" Padding="0" WidthRequest="50">
+                                        <Label Style="{StaticResource FechaNot}" Text="{Binding Fecha}"/>
+                                    </Frame>
+                                    <Frame HasShadow="False" Padding="0" WidthRequest="400">
+                                        <StackLayout Orientation="Vertical" Spacing="5">
+                                            <Image WidthRequest="300" HeightRequest="180" Source="{Binding Imagen}"/>
+                                            <Label Style="{StaticResource TitulosApp}" Text="{Binding Titulo}"/>
+                                            <Label Style="{StaticResource DescripApp}" Text="{Binding Descripcion}"/>
+                                        </StackLayout>
+                                    </Frame>
                                 </StackLayout>
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
+            </Grid>
+            <Grid Grid.Row="2" VerticalOptions="End">
+                <StackLayout Orientation="Horizontal">
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenHom"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="30"  Source="MenHome.png"/>
+                            <Label Text="Home" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenReco"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="25"  Source="Menrecojo.png"/>
+                            <Label Text="Recojos" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenPun"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="25"  Source="MenPunto.png"/>
+                            <Label Text="Puntos" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenMan"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="25"  Source="MenManual.png"/>
+                            <Label Text="Manuales" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenNot"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="30"  Source="MenNoticia.png"/>
+                            <Label Text="Noticias" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
             </Grid>
         </Grid>
     </ContentPage.Content>

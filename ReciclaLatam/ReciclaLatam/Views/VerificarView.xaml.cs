@@ -16,5 +16,14 @@ namespace ReciclaLatam.Views
         {
             InitializeComponent();
         }
+        private void LoginBack(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new OlvideContrasenaView();
+        }
+
+        private void VolverCodigo(object sender, EventArgs e)
+        {
+            //Application.Current.MainPage = new LoginView();
+        }
     }
 }

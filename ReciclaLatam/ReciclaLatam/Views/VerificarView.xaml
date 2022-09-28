@@ -1,46 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ReciclaLatam.Views.VerificarView">
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS, Android" Value="10,20,10,0"/>
-        </OnPlatform>
-    </ContentPage.Padding>
+             xmlns:local="clr-namespace:ReciclaLatam"
+             x:Class="ReciclaLatam.Views.VerificarView"
+             Background="#FFFFFF">
     <ContentPage.Content>
         <Grid RowSpacing="10" HorizontalOptions="CenterAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" WidthRequest="800" VerticalOptions="Start">
-                <Frame Padding="0">
-                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Start">
-                        <Image Source="back.png">
-                            <!--<Image.GestureRecognizers>
+            <Grid Grid.Row="0" VerticalOptions="Start" Margin="0,15,0,0">
+                <Frame Padding="0" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <Image WidthRequest="80" HeightRequest="55" Source="back.png">
+                            <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="LoginBack"/>
-                            </Image.GestureRecognizers>-->
+                            </Image.GestureRecognizers>
                         </Image>
-                        <Label VerticalOptions="Center">Olvidé mi contraseña</Label>
+                        <Label Style="{StaticResource TituloNav}">Verificar código</Label>
                     </StackLayout>
                 </Frame>
             </Grid>
-            <Grid Grid.Row="1" VerticalOptions="Center">
-                <Frame VerticalOptions="Center">
+            <Grid Grid.Row="1" VerticalOptions="Center" Padding="20,0,20,0" Margin="0,40,0,0">
+                <Frame HasShadow="False" VerticalOptions="Center">
                     <StackLayout Orientation="Vertical" Spacing="10">
-                        <Image HorizontalOptions="Center" WidthRequest="500" Source="olvide.png"/>
-                        <Label>Revisa tu correo te enviamos un código</Label>
+                        <Image HorizontalOptions="Center" WidthRequest="224" HeightRequest="160" Source="olvide.png"/>
+                        <Label TextColor="#25333F" FontSize="16" FontFamily="MontserratR" HorizontalOptions="Center" Margin="0,10,0,0">Revisa tu correo te enviamos un código</Label>
                     </StackLayout>
                 </Frame>
             </Grid>
-            <Grid Grid.Row="2" WidthRequest="500" VerticalOptions="Center">
+            <Grid Grid.Row="2" WidthRequest="500" VerticalOptions="Center" Padding="20,0,20,0">
                 <Frame HasShadow="False">
                     <StackLayout Orientation="Vertical" Spacing="10">
-                        <Entry x:Name="UserName" Text="{Binding Codigo}" TextColor="DarkBlue" Placeholder="Copia el Código" PlaceholderColor="Gray" HeightRequest="40"/>
-                        <Button Command="{Binding ValidarCommand}" Text="Solicitar" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Large" BackgroundColor="DarkBlue"/>
+                        <local:RoundedEntry Style="{StaticResource InputForm}" Text="{Binding UserName}" Placeholder="Copia el código aquí"/>
+                        <Button Style="{StaticResource BtnForm}" Command="{Binding OlvideCommand}" Text="Restaurar contraseña"/>
                     </StackLayout>
                 </Frame>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Label HorizontalOptions="Center" Text="Volver a enviar el código" FontFamily="MontserratL" FontSize="14" TextColor="#3B5165" TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="VolverCodigo"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </Grid>
         </Grid>
     </ContentPage.Content>

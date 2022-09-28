@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReciclaLatam.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,15 @@ namespace ReciclaLatam.ViewsModels
         public NoticiasDetalleView()
         {
             InitializeComponent();
+        }
+
+        private void NoticiaBack(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NoticiasView();
+        }
+        private void ConfiguracionTap(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NoticiasView();
         }
     }
 }

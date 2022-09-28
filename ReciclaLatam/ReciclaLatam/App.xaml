@@ -35,6 +35,59 @@
                 <Setter Property="TextColor" Value="#25333F"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
+
+            <Style TargetType="Label" x:Key="TitulosApp">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontFamily" Value="MontserratB"/>
+                <Setter Property="TextColor" Value="#25333F"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="DescripApp">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="FontFamily" Value="MontserratR"/>
+                <Setter Property="TextColor" Value="#6E7C89"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            
+            <Style TargetType="Label" x:Key="DesMenu">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="MontserratR"/>
+                <Setter Property="TextColor" Value="#6E7C89"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style TargetType="Label" x:Key="FechaNot">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="FontFamily" Value="MontserratB"/>
+                <Setter Property="TextColor" Value="#25333F"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="TituloBlog">
+                <Setter Property="FontSize" Value="22"/>
+                <Setter Property="FontFamily" Value="MontserratEB"/>
+                <Setter Property="TextColor" Value="#25333F"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="FechaHora">
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontFamily" Value="MontserratR"/>
+                <Setter Property="TextColor" Value="#6E7C89"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="TagBlog">
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontFamily" Value="MontserratR"/>
+                <Setter Property="TextColor" Value="#3B5165"/>
+                <Setter Property="BackgroundColor" Value="#E5F2F7"/>
+                <Setter Property="Padding" Value="10,5"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
