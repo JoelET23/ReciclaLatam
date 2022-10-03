@@ -1,5 +1,4 @@
-﻿using ReciclaLatam.ViewsModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,23 +10,20 @@ using Xamarin.Forms.Xaml;
 namespace ReciclaLatam.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ManualesView : ContentPage
+    public partial class RecojoView : ContentPage
     {
-        public ManualesView()
+        public RecojoView()
         {
             InitializeComponent();
-            BindingContext = new ManualVM();
         }
-
         private void ConfiguracionTap(object sender, EventArgs e)
         {
             Application.Current.MainPage = new ConfiguracionView();
         }
 
-        private void DonwnloadPdf(object sender, EventArgs e)
+        private void TuReciView(object sender, EventArgs e)
         {
-            var url = "https://alavista.tech/vibe/pdf/Brochure_VIBE.pdf";
-            Device.OpenUri(new Uri(url));
+            Application.Current.MainPage = new TuRecicladorView();
         }
         private void MenHom(object sender, EventArgs e)
         {
@@ -39,7 +35,7 @@ namespace ReciclaLatam.Views
         }
         private void MenPun(object sender, EventArgs e)
         {
-            
+
         }
         private void MenMan(object sender, EventArgs e)
         {

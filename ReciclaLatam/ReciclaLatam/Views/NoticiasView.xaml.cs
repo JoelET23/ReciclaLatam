@@ -62,7 +62,7 @@ namespace ReciclaLatam.Views
         }
         private void ConfiguracionTap(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NoticiasView();
+            Application.Current.MainPage = new ConfiguracionView();
         }
 
         private void MenHom(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace ReciclaLatam.Views
         }
         private void MenReco(object sender, EventArgs e)
         {
-
+            Application.Current.MainPage = new RecojoView();
         }
         private void MenPun(object sender, EventArgs e)
         {

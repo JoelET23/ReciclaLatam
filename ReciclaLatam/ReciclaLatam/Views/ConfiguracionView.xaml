@@ -1,12 +1,123 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ReciclaLatam.Views.ConfiguracionView">
+             x:Class="ReciclaLatam.Views.ConfiguracionView"
+             BackgroundColor="#FFFFFF">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android" Value="0,0,0,0"/>
+        </OnPlatform>
+    </ContentPage.Padding>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid Padding="15,0,15,0" RowSpacing="10" HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0" VerticalOptions="Start">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                    <Frame Padding="0,20,0,10" HasShadow="False" BackgroundColor="Transparent" WidthRequest="450" HeightRequest="55">
+                        <StackLayout HorizontalOptions="Start" Padding="0" Orientation="Horizontal">
+                            <Image WidthRequest="30" HeightRequest="40" Margin="0,0,15,0" Source="back.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="InicioBack"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Style="{StaticResource TituloNav}">Configuración</Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0,20,0,10" HasShadow="False" BackgroundColor="Transparent" WidthRequest="150" HorizontalOptions="End" HeightRequest="55">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                            <Image x:Name="btnisvis" WidthRequest="25" HeightRequest="25" HorizontalOptions="End" Source="ajustesInt.png"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+            
+            <Grid Grid.Row="1">
+                <StackLayout Orientation="Vertical" Margin="0,20,0,0">
+                    <Frame HasShadow="False" Padding="0">
+                        <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
+                            <Frame WidthRequest="80" HasShadow="False" Padding="0">
+                                <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="ConGeo.png"/>
+                            </Frame>
+                            <Frame WidthRequest="520" HasShadow="False" Padding="0" HorizontalOptions="Start">
+                                <Label Style="{StaticResource TituloConfig}">Habilitar geolocalización</Label>
+                            </Frame>
+                            <Frame WidthRequest="40" HasShadow="False" Padding="0">
+                                <Image Source="RecojoArrow.png"/>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                    
+                    <Frame HasShadow="False" Padding="0">
+                        <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
+                            <Frame WidthRequest="80" HasShadow="False" Padding="0">
+                                <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="ConTer.png"/>
+                            </Frame>
+                            <Frame WidthRequest="520" HasShadow="False" Padding="0" HorizontalOptions="Start">
+                                <Label Style="{StaticResource TituloConfig}">Términos y condiciones</Label>
+                            </Frame>
+                            <Frame WidthRequest="40" HasShadow="False" Padding="0">
+                                <Image Source="ConLink.png"/>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                    
+                    <Frame HasShadow="False" Padding="0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ViewInfo"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
+                            <Frame WidthRequest="80" HasShadow="False" Padding="0">
+                                <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="ConInf.png"/>
+                            </Frame>
+                            <Frame WidthRequest="520" HasShadow="False" Padding="0" HorizontalOptions="Start">
+                                <Label Style="{StaticResource TituloConfig}">Editar mi información</Label>
+                            </Frame>
+                            <Frame WidthRequest="40" HasShadow="False" Padding="0">
+                                <Image Source="RecojoArrow.png"/>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                    
+                    <Frame HasShadow="False" Padding="0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="CerrarTap"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
+                            <Frame WidthRequest="80" HasShadow="False" Padding="0">
+                                <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="ConCer.png"/>
+                            </Frame>
+                            <Frame WidthRequest="520" HasShadow="False" Padding="0" HorizontalOptions="Start">
+                                <Label Style="{StaticResource TituloConfig}">Cerrar sesión</Label>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                    
+                    <Frame HasShadow="False" Padding="0">
+                        <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
+                            <Frame WidthRequest="80" HasShadow="False" Padding="0">
+                                <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="ConEli.png"/>
+                            </Frame>
+                            <Frame WidthRequest="520" HasShadow="False" Padding="0" HorizontalOptions="Start">
+                                <Label Style="{StaticResource TituloConfig}">Eliminar cuenta</Label>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+            
+            <Grid Grid.Row="2">
+                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                    <Image Margin="0,20,0,0" HorizontalOptions="Start" WidthRequest="200" HeightRequest="50" Source="ConLogo.png"/>
+                    <Label Margin="0,30" TextColor="#6E7C89" FontFamily="MontserratR" FontSize="14">Versión 02.0.0</Label>
+                    <Label TextColor="#6E7C89" FontFamily="MontserratR" FontSize="14">Para más información contactanos a</Label>
+                    <Label TextColor="#6E7C89" FontFamily="MontserratB" FontSize="14">contacto@reciclape.org</Label>
+                </StackLayout>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

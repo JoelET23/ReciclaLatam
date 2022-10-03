@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReciclaLatam.Views.MiInfoView"
+             Background="#FFFFFF">
+    <ContentPage.Content>
+        <Grid RowSpacing="10" HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" VerticalOptions="Start" Margin="0,15,0,0">
+                <Frame Padding="0" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <Image WidthRequest="30" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ConfigBack"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Style="{StaticResource TituloNav}">Mi información</Label>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="1" VerticalOptions="Center" Padding="20,0,20,0" Margin="0,40,0,40">
+                <Frame HasShadow="False" VerticalOptions="Center">
+                    <Image HorizontalOptions="Center" WidthRequest="224" HeightRequest="160" Source="userInfo.png"/>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="2" Padding="20,0,20,0" Margin="0,0,0,30">
+                <StackLayout Orientation="Vertical">
+                    <Frame HasShadow="False" Padding="0" Margin="0,0,0,30">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame HasShadow="False" Padding="30,0,0,0">
+                                <Image WidthRequest="35" HeightRequest="35" VerticalOptions="Start" Source="personaInf.png"/>
+                            </Frame>
+                            <Frame HasShadow="False" Padding="20,0,0,0">
+                                <StackLayout>
+                                    <Label TextColor="#25333F" FontFamily="MontserratB" FontSize="15">Nombre</Label>
+                                    <Label>Paulina Romero</Label>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="False" Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame HasShadow="False" Padding="30,0,0,0">
+                                <Image WidthRequest="35" HeightRequest="35" VerticalOptions="Start" Source="mailInf.png"/>
+                            </Frame>
+                            <Frame HasShadow="False" Padding="20,0,0,0">
+                                <StackLayout>
+                                    <Label TextColor="#25333F" FontFamily="MontserratB" FontSize="15">Email</Label>
+                                    <Label>pauromero@gmail.com</Label>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="3" WidthRequest="500" Padding="20,0,20,0">
+                <Frame HasShadow="False">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Button Style="{StaticResource BtnForm}" Text="Editar mis datos" Clicked="BtnEdit"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

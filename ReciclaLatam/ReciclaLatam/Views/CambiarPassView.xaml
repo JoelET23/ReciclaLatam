@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ReciclaLatam"
-             x:Class="ReciclaLatam.Views.OlvideContrasenaView"
+             x:Class="ReciclaLatam.Views.CambiarPassView"
              Background="#FFFFFF">
     <ContentPage.Content>
         <Grid RowSpacing="10" HorizontalOptions="CenterAndExpand">
@@ -16,26 +16,24 @@
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
                         <Image WidthRequest="30" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="LoginBack"/>
+                                <TapGestureRecognizer Tapped="EditBack"/>
                             </Image.GestureRecognizers>
                         </Image>
-                        <Label Style="{StaticResource TituloNav}">Olvidé mi contraseña</Label>
+                        <Label Style="{StaticResource TituloNav}">Cambiar contraseña</Label>
                     </StackLayout>
                 </Frame>
             </Grid>
-            <Grid Grid.Row="1" VerticalOptions="Center" Padding="20,0,20,0" Margin="0,40,0,0">
-                <Frame HasShadow="False" VerticalOptions="Center">
-                    <StackLayout Orientation="Vertical" Spacing="10">
-                        <Image HorizontalOptions="Center" WidthRequest="224" HeightRequest="160" Source="olvide.png"/>
-                        <Label TextColor="#25333F" FontSize="16" FontFamily="MontserratR" HorizontalOptions="Center" Margin="0,10,0,0">Ingresa tu Email y te ayudaremos.</Label>
-                    </StackLayout>
-                </Frame>
+            <Grid Grid.Row="1" VerticalOptions="Center" Padding="20,0,20,0" Margin="0,20,0,0">
+                <Label Style="{StaticResource DescripApp}">Actualmente cuentas con una contraseña asignada, para cambiar tu contraseña completa el siguiente formulario.</Label>
             </Grid>
             <Grid Grid.Row="2" WidthRequest="500" VerticalOptions="Center" Padding="20,0,20,0">
                 <Frame HasShadow="False">
                     <StackLayout Orientation="Vertical" Spacing="10">
-                        <local:RoundedEntry Style="{StaticResource InputForm}" Text="{Binding UserName}" Placeholder="Correo"/>
-                        <Button Style="{StaticResource BtnForm}" Command="{Binding OlvideCommand}" Text="Solicitar"/>
+                        <local:RoundedEntry Style="{StaticResource InputForm}" IsPassword="True" Margin="0,30,0,20" Placeholder="Contraseña actual"/>
+                        <Label TextColor="#25333F" FontFamily="MontserratB" FontSize="15">Nueva contraseña</Label>
+                        <local:RoundedEntry Style="{StaticResource InputForm}" IsPassword="True" Margin="0,0,0,15" Placeholder="Contraseña"/>
+                        <local:RoundedEntry Style="{StaticResource InputForm}" IsPassword="True" Margin="0,0,0,15" Placeholder="Repetir contraseña"/>
+                        <Button Style="{StaticResource BtnForm}" Clicked="ChangePass" Text="Guardar"/>
                     </StackLayout>
                 </Frame>
             </Grid>

@@ -10,21 +10,22 @@ using Xamarin.Forms.Xaml;
 namespace ReciclaLatam.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ConfiguracionView : ContentPage
+    public partial class CrearView : ContentPage
     {
-        public ConfiguracionView()
+        public CrearView()
         {
             InitializeComponent();
         }
-        private void InicioBack(object sender, EventArgs e)
+        private void LoginBack(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new InicioView();
+            Application.Current.MainPage = new LoginView();
         }
-        private void ViewInfo(object sender, EventArgs e)
+        private void LoginPass(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new MiInfoView();
+            Application.Current.MainPage = new LoginView();
         }
-        private void CerrarTap(object sender, EventArgs e)
+
+        private void SaveLog(object sender, EventArgs e)
         {
             Application.Current.MainPage = new LoginView();
         }

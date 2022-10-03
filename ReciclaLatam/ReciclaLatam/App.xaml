@@ -88,6 +88,33 @@
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
+            <Style TargetType="Label" x:Key="TituloTab">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="MontserratB"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="TituloFechaRec">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="MontserratR"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="TituloHmA">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontFamily" Value="MontserratB"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="TextColor" Value="#25333F"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="TituloConfig">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="FontFamily" Value="MontserratR"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="TextColor" Value="#25333F"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

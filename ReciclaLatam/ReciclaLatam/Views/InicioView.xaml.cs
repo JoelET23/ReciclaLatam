@@ -33,7 +33,7 @@ namespace ReciclaLatam.Views
                 //await Navigation.PushAsync(new ManualesView());
                 if (IdMenuItem == 1)
                 {
-                    DisplayAlert("Alerta", "Entra a página de recojo", "OK");
+                    Application.Current.MainPage = new RecojoView();
                 }
                 else if (NombreMenu == "Puntos")
                 {
@@ -49,13 +49,18 @@ namespace ReciclaLatam.Views
                 }
                 else if (NombreMenu == "Mi info")
                 {
-                    DisplayAlert("Alerta", "Entra a página de Mi info", "OK");
+                    Application.Current.MainPage = new MiInfoView();
                 }
                 else if (NombreMenu == "Nosotros")
                 {
-                    DisplayAlert("Alerta", "Entra a página de nosotros", "OK");
+                    Application.Current.MainPage = new NosotrosView();
                 }
             }
+        }
+
+        private void ViewConfig(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new ConfiguracionView();
         }
     }
 }

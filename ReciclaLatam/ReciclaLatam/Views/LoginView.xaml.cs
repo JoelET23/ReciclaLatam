@@ -28,7 +28,7 @@ namespace ReciclaLatam.Views
 
         private void NuevoUser(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NuevoUsuarioView();
+            Application.Current.MainPage = new CrearView();
         }
     }
 }
