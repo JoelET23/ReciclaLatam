@@ -23,6 +23,7 @@
                     </StackLayout>
                 </Frame>
             </Grid>
+            
             <Grid Grid.Row="1" VerticalOptions="Center" Padding="20,0,20,0" Margin="0,40,0,0">
                 <StackLayout Orientation="Vertical">
                     <Frame HasShadow="False" VerticalOptions="Center">
