@@ -5,6 +5,7 @@
              x:Class="ReciclaLatam.Views.CrearView"
              Background="#FFFFFF">
     <ContentPage.Content>
+        
         <Grid RowSpacing="10" HorizontalOptions="CenterAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
