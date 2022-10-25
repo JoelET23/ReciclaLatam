@@ -22,43 +22,42 @@
             <Grid Grid.Row="0" WidthRequest="800" >
                 <Image Source="BgInicio.png" HeightRequest="10" Opacity="1.0" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
                 <StackLayout Orientation="Vertical" Padding="15,19,15,50">
-                        <Frame Padding="0" HasShadow="False" HeightRequest="60" BackgroundColor="Transparent">
-                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" Spacing="10">
-                                <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="Start">
-                                    <Image WidthRequest="90" HeightRequest="40" HorizontalOptions="Start" Source="LogoIncio.png"/>
-                                </Frame>
-                                <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
-                                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="End">
-                                        <Image WidthRequest="20" HeightRequest="20" Source="facebook.png"/>
-                                        <Image WidthRequest="20" HeightRequest="20" Source="instagram.png"/>
-                                        <Image WidthRequest="20" HeightRequest="20" Source="youtube.png"/>
-                                        <Image WidthRequest="20" HeightRequest="20" Source="linkedin.png"/>
-                                    </StackLayout>
-                                </Frame>
-                            </StackLayout>
-                        </Frame>
-                        <Frame Padding="0" HasShadow="False" BackgroundColor="Transparent" Margin="0,0,0,20">
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0">
-                                    <StackLayout Orientation="Horizontal" Spacing="5">
-                                        <Image WidthRequest="60" HeightRequest="60" HorizontalOptions="Start" Source="User.png"/>
-                                        <Label FontFamily="MontserratR" TextColor="#FFFFFF" VerticalOptions="Center" FontSize="18">Hola, Paulina</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
-                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="End">
-                                        <Image WidthRequest="20" HeightRequest="20" Source="notificacion.png"/>
-                                        <Image WidthRequest="20" HeightRequest="20" Source="ajustes.png">
-                                            <Image.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="ViewConfig"/>
-                                            </Image.GestureRecognizers>
-                                        </Image>
-                                    </StackLayout>
-                                </Frame>
-                            </StackLayout>
-                        </Frame>
-                    </StackLayout>
-               
+                    <Frame Padding="0" HasShadow="False" HeightRequest="60" BackgroundColor="Transparent">
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" Spacing="10">
+                            <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="Start">
+                                <Image WidthRequest="90" HeightRequest="40" HorizontalOptions="Start" Source="LogoIncio.png"/>
+                            </Frame>
+                            <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
+                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="End">
+                                    <Image WidthRequest="20" HeightRequest="20" Source="facebook.png"/>
+                                    <Image WidthRequest="20" HeightRequest="20" Source="instagram.png"/>
+                                    <Image WidthRequest="20" HeightRequest="20" Source="youtube.png"/>
+                                    <Image WidthRequest="20" HeightRequest="20" Source="linkedin.png"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="False" BackgroundColor="Transparent" Margin="0,0,0,20">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0">
+                                <StackLayout Orientation="Horizontal" Spacing="5">
+                                    <Image WidthRequest="60" HeightRequest="60" HorizontalOptions="Start" Source="User.png"/>
+                                    <Label FontFamily="MontserratR" TextColor="#FFFFFF" VerticalOptions="Center" FontSize="18">Hola, Paulina</Label>
+                                </StackLayout>
+                            </Frame>
+                            <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
+                                <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="End">
+                                    <Image WidthRequest="20" HeightRequest="20" Source="notificacion.png"/>
+                                    <Image WidthRequest="20" HeightRequest="20" Source="ajustes.png">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="ViewConfig"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
             </Grid>
 
             <Grid Grid.Row="1" Padding="15,0,15,0" Margin="0,-50,0,0">
