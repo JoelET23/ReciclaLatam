@@ -61,7 +61,6 @@
                
             </Grid>
 
-
             <Grid Grid.Row="1" Padding="15,0,15,0" Margin="0,-50,0,0">
                 <CollectionView ItemsSource="{Binding MenuInicio}" SelectionMode="Single" HeightRequest="300" x:Name="MenuInicioPage">
                     <CollectionView.ItemsLayout>
