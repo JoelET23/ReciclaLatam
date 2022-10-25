@@ -36,14 +36,14 @@
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                             <Frame HasShadow="False" Padding="15,5" BackgroundColor="#E5F2F7" Margin="0,0,20,0" CornerRadius="10">
                                 <StackLayout Orientation="Horizontal">
-                                    <Image Source="EditFoto.png"/>
-                                    <Label FontSize="14" VerticalOptions="Center" TextColor="#25333F" FontFamily="MontserratR">Tomar foto</Label>
+                                    <Image WidthRequest="30" Source="EditFoto.png"/>
+                                    <Label FontSize="13" VerticalOptions="Center" TextColor="#25333F" FontFamily="MontserratR">Tomar foto</Label>
                                 </StackLayout>
                             </Frame>
                             <Frame HasShadow="False" Padding="15,5" BackgroundColor="#E5F2F7" CornerRadius="10">
                                 <StackLayout Orientation="Horizontal">
-                                    <Image Source="EditGal.png"/>
-                                    <Label FontSize="14" VerticalOptions="Center" TextColor="#25333F" FontFamily="MontserratR">Subir de galería</Label>
+                                    <Image WidthRequest="30" Source="EditGal.png"/>
+                                    <Label FontSize="13" VerticalOptions="Center" TextColor="#25333F" FontFamily="MontserratR">Subir de galería</Label>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>

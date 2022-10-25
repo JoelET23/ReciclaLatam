@@ -37,7 +37,7 @@
                             <Frame HasShadow="False" Padding="20,0,0,0">
                                 <StackLayout>
                                     <Label TextColor="#25333F" FontFamily="MontserratB" FontSize="15">Nombre</Label>
-                                    <Label>Paulina Romero</Label>
+                                    <Label TextColor="#25333F" FontFamily="MontserratR" FontSize="15">Paulina Romero</Label>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
@@ -50,7 +50,7 @@
                             <Frame HasShadow="False" Padding="20,0,0,0">
                                 <StackLayout>
                                     <Label TextColor="#25333F" FontFamily="MontserratB" FontSize="15">Email</Label>
-                                    <Label>pauromero@gmail.com</Label>
+                                    <Label TextColor="#25333F" FontFamily="MontserratR" FontSize="15">pauromero@gmail.com</Label>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>

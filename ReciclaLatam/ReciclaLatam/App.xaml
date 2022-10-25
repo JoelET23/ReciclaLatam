@@ -98,6 +98,7 @@
                 <Setter Property="FontSize" Value="14"/>
                 <Setter Property="FontFamily" Value="MontserratR"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="TextColor" Value="#25333F"/>
             </Style>
 
             <Style TargetType="Label" x:Key="TituloHmA">
