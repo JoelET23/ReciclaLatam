@@ -63,7 +63,7 @@ namespace ReciclaLatam.Views
         private void ApplyMapTheme()
         {
             var assembly = typeof(MainPage).GetTypeInfo().Assembly;
-            var stream = assembly.GetManifestResourceStream($"ReciclaLatam.MapResources.MapTheme.json");
+            /*var stream = assembly.GetManifestResourceStream($"ReciclaLatam.MapResources.MapTheme.json");
             string themeFile;
             using (var reader = new System.IO.StreamReader(stream))
             {
@@ -71,7 +71,10 @@ namespace ReciclaLatam.Views
                 map.MapStyle = MapStyle.FromJson(themeFile);
                 map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(28.12267, 82.29483), Distance.FromMeters(1000)), false);
 
-            }
+            }*/
+
+            StartRutaVehiculo();
+
         }
 
         void GetMovil(Object sender, EventArgs e)
@@ -182,8 +185,10 @@ namespace ReciclaLatam.Views
             var positions = new Position(28.126751, 82.297092);//Latitude, Longitude
             map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(500)));
         }
-
         void RutaVehiculo(System.Object sender, System.EventArgs e)
+        {
+        }
+            void StartRutaVehiculo()
         {
             var assembly = typeof(MainPage).GetTypeInfo().Assembly;
             var stream = assembly.GetManifestResourceStream($"ReciclaLatam.MapResources.TrackPath.json");
