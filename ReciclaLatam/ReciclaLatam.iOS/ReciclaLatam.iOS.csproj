@@ -128,8 +128,20 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Microsoft.Net.Http">
+      <Version>2.2.29</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.2-beta2</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json.Bson">
+      <Version>1.0.3-beta1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps">
+      <Version>5.0.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -137,5 +149,14 @@
       <Project>{A5761F8C-72F7-4080-B315-AD16FDF5BB56}</Project>
       <Name>ReciclaLatam</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PickupPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CarPins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CircleImg.png" />
   </ItemGroup>
 </Project>

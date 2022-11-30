@@ -14,7 +14,7 @@
             <Grid Grid.Row="0" VerticalOptions="Start" Margin="0,15,0,0">
                 <Frame Padding="0" HasShadow="False">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-                        <Image WidthRequest="30" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
+                        <Image WidthRequest="25" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="LoginBack"/>
                             </Image.GestureRecognizers>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             x:Class="ReciclaLatam.Views.PuntosMapaView">
+    <Grid>
+        <maps:Map x:Name="map"/>
+        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+            <Button Text="Localizar Vehículo" x:Name="TrackPath" BackgroundColor="Black" TextColor="White" Padding="10" Clicked="RutaVehiculo" VerticalOptions="EndAndExpand"/>
+            <Grid VerticalOptions="EndAndExpand" BackgroundColor="#ffffff">
+                <StackLayout Orientation="Horizontal">
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenHom"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="30"  Source="MenHome.png"/>
+                            <Label Text="Home" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenReco"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="25"  Source="Menrecojo.png"/>
+                            <Label Text="Recojos" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenPun"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="25"  Source="MenPunto.png"/>
+                            <Label Text="Puntos" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenMan"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="25"  Source="MenManual.png"/>
+                            <Label Text="Manuales" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MenNot"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <Image WidthRequest="50" HeightRequest="30"  Source="MenNoticia.png"/>
+                            <Label Text="Noticias" Style="{StaticResource DesMenu}"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </Grid>
+</ContentPage>

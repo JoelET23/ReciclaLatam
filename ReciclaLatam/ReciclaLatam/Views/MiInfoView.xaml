@@ -13,7 +13,7 @@
             <Grid Grid.Row="0" VerticalOptions="Start" Margin="0,15,0,0">
                 <Frame Padding="0" HasShadow="False">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-                        <Image WidthRequest="30" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
+                        <Image WidthRequest="25" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="ConfigBack"/>
                             </Image.GestureRecognizers>
@@ -37,7 +37,7 @@
                             <Frame HasShadow="False" Padding="20,0,0,0">
                                 <StackLayout>
                                     <Label TextColor="#25333F" FontFamily="MontserratB" FontSize="15">Nombre</Label>
-                                    <Label TextColor="#25333F" FontFamily="MontserratR" FontSize="15">Paulina Romero</Label>
+                                    <Label x:Name="LblNomInfo" TextColor="#25333F" FontFamily="MontserratR" FontSize="15"/>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
@@ -50,7 +50,7 @@
                             <Frame HasShadow="False" Padding="20,0,0,0">
                                 <StackLayout>
                                     <Label TextColor="#25333F" FontFamily="MontserratB" FontSize="15">Email</Label>
-                                    <Label TextColor="#25333F" FontFamily="MontserratR" FontSize="15">pauromero@gmail.com</Label>
+                                    <Label x:Name="LblCorrInfo" TextColor="#25333F" FontFamily="MontserratR" FontSize="15"/>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>

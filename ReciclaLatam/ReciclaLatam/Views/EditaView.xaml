@@ -14,7 +14,7 @@
             <Grid Grid.Row="0" VerticalOptions="Start" Margin="0,15,0,0">
                 <Frame Padding="0" HasShadow="False">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-                        <Image WidthRequest="30" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
+                        <Image WidthRequest="25" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="InfoBack"/>
                             </Image.GestureRecognizers>
@@ -54,9 +54,9 @@
             <Grid Grid.Row="2" WidthRequest="500" VerticalOptions="Center" Padding="20,0,20,0">
                 <Frame HasShadow="False">
                     <StackLayout Orientation="Vertical" Spacing="10">
-                        <local:RoundedEntry Style="{StaticResource InputForm}" Margin="0,0,0,15" Placeholder="Nombre"/>
-                        <local:RoundedEntry Style="{StaticResource InputForm}" Margin="0,0,0,15" Placeholder="Correo"/>
-                        <Button Style="{StaticResource BtnForm}" Command="{Binding OlvideCommand}" Text="Guardar"/>
+                        <local:RoundedEntry x:Name="EntNom" Style="{StaticResource InputForm}" Margin="0,0,0,15" Placeholder="Nombre"/>
+                        <local:RoundedEntry x:Name="EntCor" Style="{StaticResource InputForm}" Margin="0,0,0,15" Placeholder="Correo"/>
+                        <Button Style="{StaticResource BtnForm}" Clicked="ClickUpdate" Text="Guardar"/>
                         <Button Clicked="ChangePass" BorderColor="#3B5165" CornerRadius="50" WidthRequest="300" HeightRequest="55" BorderWidth="1" Text="Cambiar contraseña" FontFamily="MontserratB" FontSize="14" TextColor="#3B5165" BackgroundColor="#FFFFFF" HorizontalOptions="Center" Margin="0,10,0,0"/>
                     </StackLayout>
                 </Frame>

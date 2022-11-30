@@ -22,7 +22,7 @@ namespace ReciclaLatam.ViewsModels
         }
         public OlvideContrasenaVM()
         {
-            _userName = "Joel";
+           // _userName = "Joel";
         }
         public Command OlvideCommand
         {

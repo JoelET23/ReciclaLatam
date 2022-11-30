@@ -14,7 +14,7 @@
             <Grid Grid.Row="0" VerticalOptions="Start" Margin="0,15,0,0">
                 <Frame Padding="0" HasShadow="False">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-                        <Image WidthRequest="30" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
+                        <Image WidthRequest="25" HeightRequest="40" Margin="15,0,15,0" Source="back.png">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="EditBack"/>
                             </Image.GestureRecognizers>
@@ -29,10 +29,10 @@
             <Grid Grid.Row="2" WidthRequest="500" VerticalOptions="Center" Padding="20,0,20,0">
                 <Frame HasShadow="False">
                     <StackLayout Orientation="Vertical" Spacing="10">
-                        <local:RoundedEntry Style="{StaticResource InputForm}" IsPassword="True" Margin="0,30,0,20" Placeholder="Contraseña actual"/>
+                        <local:RoundedEntry x:Name="ClaveAct" Style="{StaticResource InputForm}" IsPassword="True" Margin="0,30,0,20" Placeholder="Contraseña actual"/>
                         <Label TextColor="#25333F" FontFamily="MontserratB" FontSize="15">Nueva contraseña</Label>
-                        <local:RoundedEntry Style="{StaticResource InputForm}" IsPassword="True" Margin="0,0,0,15" Placeholder="Contraseña"/>
-                        <local:RoundedEntry Style="{StaticResource InputForm}" IsPassword="True" Margin="0,0,0,15" Placeholder="Repetir contraseña"/>
+                        <local:RoundedEntry x:Name="ClaveNew" Style="{StaticResource InputForm}" IsPassword="True" Margin="0,0,0,15" Placeholder="Contraseña"/>
+                        <local:RoundedEntry x:Name="ClaveNewt" Style="{StaticResource InputForm}" IsPassword="True" Margin="0,0,0,15" Placeholder="Repetir contraseña"/>
                         <Button Style="{StaticResource BtnForm}" Clicked="ChangePass" Text="Guardar"/>
                     </StackLayout>
                 </Frame>

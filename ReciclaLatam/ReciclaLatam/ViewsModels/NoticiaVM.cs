@@ -14,7 +14,7 @@ namespace ReciclaLatam.ViewsModels
         {
             NoticiasCol = new ObservableCollection<NoticiasModels>
             {
-                new NoticiasModels
+                /*new NoticiasModels
                 {
                     Id = 1,
                     Titulo = "Consequat sagittis sapien blandit velit egestas.",
@@ -29,7 +29,7 @@ namespace ReciclaLatam.ViewsModels
                     Descripcion = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus nunc nunc vel viverra.",
                     Fecha = "25 Ago",
                     Imagen = "Noticia2.png"
-                }
+                }*/
 
             };
         }

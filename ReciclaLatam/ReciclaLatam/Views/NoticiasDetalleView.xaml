@@ -19,7 +19,7 @@
                 <StackLayout Padding="0" Orientation="Horizontal">
                     <Frame Padding="0,20,0,10" HasShadow="False" BackgroundColor="Transparent" WidthRequest="300" HeightRequest="55">
                         <StackLayout HorizontalOptions="Start" Padding="0" Orientation="Horizontal">
-                            <Image WidthRequest="30" HeightRequest="40" Margin="0,0,15,0" Source="back.png">
+                            <Image WidthRequest="25" HeightRequest="40" Margin="0,0,15,0" Source="back.png">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="NoticiaBack"/>
                                 </Image.GestureRecognizers>
@@ -41,13 +41,12 @@
             <Grid Grid.Row="1">
                 <StackLayout Orientation="Vertical" Padding="0">
                     <StackLayout Orientation="Horizontal"  HorizontalOptions="Start" MinimumHeightRequest="100">
-                        <Label Style="{StaticResource TituloBlog}">Consequat sagittis sapien blandit velit egestas.</Label>
+                        <Label x:Name="LblTitNot" Style="{StaticResource TituloBlog}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"  HorizontalOptions="Start" Margin="0,10,0,10">
-                        <Label Style="{StaticResource FechaHora}">16 Ago</Label>
-                        <Label Style="{StaticResource FechaHora}">10:00 am</Label>
-                        <Label Style="{StaticResource TagBlog}">Reciclaje</Label>
-                        <Label Style="{StaticResource TagBlog}">Horarios</Label>
+                        <Label x:Name="LblFechNot" Style="{StaticResource FechaHora}"/>
+                        <!--<Label Style="{StaticResource FechaHora}">10:00 am</Label>-->
+                        <Label x:Name="LblCatNot" Style="{StaticResource TagBlog}"/>
                     </StackLayout>
                 </StackLayout>
             </Grid>
@@ -55,8 +54,8 @@
             <Grid Grid.Row="2">
                 <ScrollView>
                     <StackLayout Orientation="Vertical">
-                        <Image WidthRequest="200" HeightRequest="230" Source="Noticia1.png"/>
-                        <Label Style="{StaticResource DescripApp}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis suspendisse massa orci vivamus convallis quis lorem aliquet. Venenatis sed a aenean pretium. Aliquam consectetur congue turpis lorem auctor gravida faucibus enim. In feugiat nunc sed aliquam, in congue. Pharetra, augue tempus ut ultricies ac adipiscing accumsan egestas. Elit vestibulum ac odio sodales. Ornare blandit arcu amet fames. Lectus magna leo ipsum risus habitant. In massa blandit nisl, odio hendrerit quam tellus.Facilisi turpis lectus tellus nunc scelerisque pharetra, dignissim tempus. Pellentesque consectetur adipiscing tortor eget mauris vel luctus arcu at. In bibendum cum orci egestas sed aliquet vitae, vitae. Turpis ac erat at ultrices. Facilisis elementum, orci sollicitudin volutpat. Donec viverra aenean quam massa tristique turpis egestas. Cum cras leo sit amet urna sagittis eu dui fringilla. Urna, elit nibh interdum nulla urna. Eget arcu aliquet viverra pellentesque orci. Erat viverra viverra proin adipiscing in ullamcorper in. Facilisis donec purus, vulputate interdum nisl, risus turpis. Augue ultricies aliquam feugiat velit. Sit gravida feugiat commodo elementum. Risus, nec viverra tortor eu ut tincidunt sit augue. Facilisis eget viverra feugiat lorem tortor.Mauris eget velit adipiscing lacus, risus, diam. At ligula tellus, augue eu, eu, non sed faucibus. Blandit tristique pellentesque iaculis vel, egestas convallis tincidunt. Nec ut egestas consequat ut purus. Vestibulum, tortor enim, velit elit, massa sed convallis mi. Eu viverra sed nisi, justo pharetra, diam risus iaculis. Nulla gravida nibh ultrices faucibus sed lorem sit turpis. Ultrices placerat elit semper diam sed dignissimnisim ipsum tortor, adipiscing cursus et. Tincidunt diam diam odio eu, odio neque, quis felis. Sit vitae laoreet nec ac leo. Nunc tellus dui sit pharetra massa diam mauris sed. Sit fermentum, ultrices quam nunc tempor risus vitae nisl.</Label>
+                        <Image x:Name="ImgNot" WidthRequest="200" HeightRequest="230" Source="Noticia1.png"/>
+                        <Label x:Name="ContNot" Style="{StaticResource DescripApp}"/>
                     </StackLayout>
                 </ScrollView>
             </Grid>

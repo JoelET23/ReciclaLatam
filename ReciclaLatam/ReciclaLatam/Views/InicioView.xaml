@@ -41,14 +41,14 @@
                         <StackLayout Orientation="Horizontal" Spacing="10">
                             <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0">
                                 <StackLayout Orientation="Horizontal" Spacing="5">
-                                    <Image WidthRequest="60" HeightRequest="60" HorizontalOptions="Start" Source="User.png"/>
-                                    <Label FontFamily="MontserratR" TextColor="#FFFFFF" VerticalOptions="Center" FontSize="18">Hola, Paulina</Label>
+                                    <Image WidthRequest="60" HeightRequest="60" HorizontalOptions="Start" Source="userInfo.png"/>
+                                    <Label x:Name="LblNomInicio" FontFamily="MontserratR" TextColor="#FFFFFF" VerticalOptions="Center" FontSize="18"/>
                                 </StackLayout>
                             </Frame>
                             <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
                                 <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="End">
-                                    <Image WidthRequest="20" HeightRequest="20" Source="notificacion.png"/>
-                                    <Image WidthRequest="20" HeightRequest="20" Source="ajustes.png">
+                                    <Image WidthRequest="40" HeightRequest="40" Source="notificacion.png"/>
+                                    <Image WidthRequest="40" HeightRequest="40" Source="ajustes.png">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="ViewConfig"/>
                                         </Image.GestureRecognizers>
@@ -60,7 +60,7 @@
                 </StackLayout>
             </Grid>
 
-            <Grid Grid.Row="1" Padding="15,0,15,0" Margin="0,-50,0,0">
+            <Grid Grid.Row="1" Padding="25,0,25,0" Margin="0,-50,0,0">
                 <CollectionView ItemsSource="{Binding MenuInicio}" SelectionMode="Single" HeightRequest="300" x:Name="MenuInicioPage">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="20" HorizontalItemSpacing="10"/>
@@ -68,8 +68,8 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame HasShadow="False" HeightRequest="30" Margin="0,10,10,0" CornerRadius="10">
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
-                                    <Image Source="{Binding Imagen}"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="5">
+                                    <Image WidthRequest="30" HeightRequest="25" Source="{Binding Imagen}"/>
                                     <Label Margin="10,0,0,0" TextColor="#25333F" FontFamily="MontserratB" VerticalOptions="Center" Text="{Binding Nombre}"/>
                                 </StackLayout>
                             </Frame>
@@ -110,10 +110,10 @@
 
             <Grid Grid.Row="3" Padding="15,0,15,0">
                 <StackLayout Orientation="Vertical">
-                    <Frame BackgroundColor="Transparent" HasShadow="False">
+                    <Frame BackgroundColor="Transparent" HasShadow="False" HorizontalOptions="Center">
                         <StackLayout Orientation="Vertical">
                             <Label Style="{StaticResource TituloHmA}">Con el apoyo de:</Label>
-                            <Image HorizontalOptions="Start" Source="pamolsa.png"/>
+                            <Image HorizontalOptions="Center" Source="pamolsa.png"/>
                         </StackLayout>
                         
                     </Frame>

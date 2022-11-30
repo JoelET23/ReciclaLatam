@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <UserSecretsId>32b433f3-8ea2-4d55-a3a1-a9818d8b0b80</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -15,6 +16,8 @@
     <None Remove="Fonts\MontserratEB.ttf" />
     <None Remove="Fonts\MontserratL.ttf" />
     <None Remove="Fonts\MontserratR.ttf" />
+    <None Remove="MapResources\MapTheme.json" />
+    <None Remove="MapResources\TrackPath.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,11 +25,17 @@
     <EmbeddedResource Include="Fonts\MontserratEB.ttf" />
     <EmbeddedResource Include="Fonts\MontserratL.ttf" />
     <EmbeddedResource Include="Fonts\MontserratR.ttf" />
+    <EmbeddedResource Include="MapResources\MapTheme.json" />
+    <EmbeddedResource Include="MapResources\TrackPath.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta2" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.3-beta1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +52,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MiInfoView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MisionView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\NosotrosView.xaml">
@@ -69,6 +81,9 @@
     <EmbeddedResource Update="Views\OlvideContrasenaView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\PuntosMapaView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\RecojoView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -76,6 +91,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\VerificarView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VisionView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

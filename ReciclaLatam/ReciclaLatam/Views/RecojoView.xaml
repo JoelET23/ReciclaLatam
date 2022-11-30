@@ -9,233 +9,80 @@
         </OnPlatform>
     </ContentPage.Padding>
     <ContentPage.Content>
-        <Grid Padding="15,0,15,0" RowSpacing="10" HorizontalOptions="CenterAndExpand">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" VerticalOptions="Start">
-                <StackLayout Orientation="Horizontal" VerticalOptions="Start">
-                    <Frame Padding="0,20,0,10" HasShadow="False" BackgroundColor="Transparent" WidthRequest="300" HeightRequest="55">
-                        <Label Style="{StaticResource TituloNav}">Recojos</Label>
-                    </Frame>
-                    <Frame Padding="0,20,0,10" HasShadow="False" BackgroundColor="Transparent" WidthRequest="300" HorizontalOptions="End" HeightRequest="55">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
-                            <Image x:Name="btnisvis" WidthRequest="25" HeightRequest="25" HorizontalOptions="End" Source="ajustesInt.png">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="ConfiguracionTap"/>
-                                </Image.GestureRecognizers>
-                            </Image>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </Grid>
-            <Grid Grid.Row="1">
-                <StackLayout Orientation="Horizontal">
-                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#3B5165">
-                        <Label Style="{StaticResource TituloTab}" TextColor="#FFFFFF">Recojos</Label>
-                    </Frame>
-                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TuReciView"/>
-                        </Frame.GestureRecognizers>
-                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Tu reciclador</Label>
-                    </Frame>
-                </StackLayout>
-            </Grid>
-            <Grid Grid.Row="2">
-                <ScrollView Margin="0,40,0,0" HeightRequest="565">
-                    <StackLayout Orientation="Vertical">
-                        <Frame HasShadow="False" Padding="0">
-                            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
-                                <Frame WidthRequest="120" HasShadow="False" Padding="0">
-                                    <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="100" HasShadow="False" Padding="0">
-                                    <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
-                                </Frame>
-                            </StackLayout>
+        <StackLayout>
+            <Grid Padding="15,0,15,0" RowSpacing="10" HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" VerticalOptions="Start">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                        <Frame Padding="0,20,0,10" HasShadow="False" BackgroundColor="Transparent" WidthRequest="300" HeightRequest="55">
+                            <Label Style="{StaticResource TituloNav}">Recojos</Label>
                         </Frame>
-
-                        <Frame HasShadow="False" Padding="0">
-                            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
-                                <Frame WidthRequest="120" HasShadow="False" Padding="0">
-                                    <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="100" HasShadow="False" Padding="0">
-                                    <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
-                                </Frame>
-                            </StackLayout>
-                        </Frame>
-
-                        <Frame HasShadow="False" Padding="0">
-                            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
-                                <Frame WidthRequest="120" HasShadow="False" Padding="0">
-                                    <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="100" HasShadow="False" Padding="0">
-                                    <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
-                                </Frame>
-                            </StackLayout>
-                        </Frame>
-
-                        <Frame HasShadow="False" Padding="0">
-                            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
-                                <Frame WidthRequest="120" HasShadow="False" Padding="0">
-                                    <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="100" HasShadow="False" Padding="0">
-                                    <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
-                                </Frame>
-                            </StackLayout>
-                        </Frame>
-
-                        <Frame HasShadow="False" Padding="0">
-                            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
-                                <Frame WidthRequest="120" HasShadow="False" Padding="0">
-                                    <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="100" HasShadow="False" Padding="0">
-                                    <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
-                                </Frame>
-                            </StackLayout>
-                        </Frame>
-
-                        <Frame HasShadow="False" Padding="0">
-                            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
-                                <Frame WidthRequest="120" HasShadow="False" Padding="0">
-                                    <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="100" HasShadow="False" Padding="0">
-                                    <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
-                                </Frame>
-                            </StackLayout>
-                        </Frame>
-
-                        <Frame HasShadow="False" Padding="0">
-                            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
-                                <Frame WidthRequest="120" HasShadow="False" Padding="0">
-                                    <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="100" HasShadow="False" Padding="0">
-                                    <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
-                                </Frame>
-                            </StackLayout>
-                        </Frame>
-
-                        <Frame HasShadow="False" Padding="0">
-                            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
-                                <Frame WidthRequest="120" HasShadow="False" Padding="0">
-                                    <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
-                                    </StackLayout>
-                                </Frame>
-                                <Frame WidthRequest="100" HasShadow="False" Padding="0">
-                                    <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
-                                </Frame>
+                        <Frame Padding="0,20,0,10" HasShadow="False" BackgroundColor="Transparent" WidthRequest="300" HorizontalOptions="End" HeightRequest="55">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                <Image x:Name="btnisvis" WidthRequest="25" HeightRequest="25" HorizontalOptions="End" Source="ajustesInt.png">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ConfiguracionTap"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
-                </ScrollView>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#3B5165">
+                            <Label Style="{StaticResource TituloTab}" TextColor="#FFFFFF">Recojos</Label>
+                        </Frame>
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TuReciView"/>
+                            </Frame.GestureRecognizers>
+                            <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Tu reciclador</Label>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <CollectionView HeightRequest="500" SelectionMode="Single" x:Name="RecojosPage" Margin="0,30,0,0">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="00"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame HasShadow="False" Padding="0">
+                                    <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
+                                        <Frame WidthRequest="120" HasShadow="False" Padding="0">
+                                            <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
+                                        </Frame>
+                                        <Frame WidthRequest="340" HasShadow="False" Padding="0">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
+                                                <Label Style="{StaticResource TituloFechaRec}" Text="{Binding fecha}"/>
+                                            </StackLayout>
+                                        </Frame>
+                                        <Frame WidthRequest="340" HasShadow="False" Padding="0">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
+                                                <Label Style="{StaticResource TituloFechaRec}" Text="{Binding hora_inicio}"/>
+                                            </StackLayout>
+                                        </Frame>
+                                        <Frame WidthRequest="100" HasShadow="False" Padding="0">
+                                            <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
+                                        </Frame>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+            
             </Grid>
-            <Grid Grid.Row="3" VerticalOptions="End">
-                <StackLayout Orientation="Horizontal">
+            
+            <Grid VerticalOptions="EndAndExpand">
+                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
                     <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="MenHom"/>
@@ -283,6 +130,6 @@
                     </Frame>
                 </StackLayout>
             </Grid>
-        </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

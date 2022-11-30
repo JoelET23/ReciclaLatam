@@ -1,4 +1,5 @@
-﻿using ReciclaLatam.Models;
+﻿using ReciclaLatam.ApiRest;
+using ReciclaLatam.Models;
 using ReciclaLatam.ViewsModels;
 using System;
 using System.Collections.Generic;
@@ -14,12 +15,60 @@ namespace ReciclaLatam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NoticiasView : ContentPage
     {
-        public NoticiasView()
+        #region Variables
+        public string latitud;
+        public string geolocalizacion;
+        public string apellidos;
+        public string direccion;
+        public string termycond;
+        public string nombres;
+        public int usuario_id;
+        public string correo;
+        public string password;
+        public string id_municipalidad;
+        public string telefono;
+        public string foto;
+        public string longitud;
+
+        public string TitNoticia;
+        public string FecNoticia;
+        public string CatNoticia;
+        public string ImgNoticia;
+        public string DesNoticia;
+
+        #endregion
+
+        public NoticiasView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon)
         {
             InitializeComponent();
-            BindingContext = new NoticiaVM();
-
+            //BindingContext = new NoticiaVM();
+            getNoticias();
             NoticiaPage.SelectionChanged += NoticiaPageChanged;
+
+            #region Variables2
+            latitud = l;
+            geolocalizacion = g;
+            apellidos = ap;
+            direccion = dir;
+            termycond = ter;
+            nombres = nom;
+            usuario_id = id;
+            correo = cor;
+            password = pas;
+            id_municipalidad = idmu;
+            telefono = tel;
+            foto = fot;
+            longitud = lon;
+            #endregion
+        }
+
+        private async void getNoticias()
+        {
+            ApiNoticias objApiNoticias = new ApiNoticias();
+            Task<NoticiasLista> returnNoticiasLista = objApiNoticias.WebApi();
+            NoticiasLista objNoticiasLista = await returnNoticiasLista;
+
+            NoticiaPage.ItemsSource = objNoticiasLista.Items;
         }
 
         private void NoticiaPageChanged(object sender, SelectionChangedEventArgs e)
@@ -29,61 +78,39 @@ namespace ReciclaLatam.Views
             for (int i = 0; i < _ItemNoticia.Count; i++)
             {
                 var _itemNot = _ItemNoticia[i] as NoticiasModels;
-                var NombreNot = _itemNot.Titulo;
-                var IdNotItem = _itemNot.Id;
+                TitNoticia = _itemNot.titulo;
+                FecNoticia = _itemNot.fecha_pub;
+                CatNoticia = _itemNot.categoria;
+                ImgNoticia = _itemNot.imagen;
+                DesNoticia = _itemNot.contenido_noticia;
 
-                //DisplayAlert("Alerta", "Entra a página detalle", "OK");
-                Application.Current.MainPage = new NoticiasDetalleView();
-                /*if (IdMenuItem == 1)
-                {
-                    DisplayAlert("Alerta", "Entra a página de recojo", "OK");
-                }
-                else if (NombreMenu == "Puntos")
-                {
-                    DisplayAlert("Alerta", "Entra a página de puntos", "OK");
-                }
-                else if (IdMenuItem == 3)
-                {
-                    Application.Current.MainPage = new ManualesView();
-                }
-                else if (NombreMenu == "Noticias")
-                {
-                    DisplayAlert("Alerta", "Entra a página de noticias", "OK");
-                }
-                else if (NombreMenu == "Mi info")
-                {
-                    DisplayAlert("Alerta", "Entra a página de Mi info", "OK");
-                }
-                else if (NombreMenu == "Nosotros")
-                {
-                    DisplayAlert("Alerta", "Entra a página de nosotros", "OK");
-                }*/
+                Application.Current.MainPage = new NoticiasDetalleView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud, TitNoticia, FecNoticia, CatNoticia, ImgNoticia, DesNoticia); 
             }
         }
         private void ConfiguracionTap(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new ConfiguracionView();
+            Application.Current.MainPage = new ConfiguracionView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
 
         private void MenHom(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new InicioView();
+            Application.Current.MainPage = new InicioView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
         private void MenReco(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new RecojoView();
+            Application.Current.MainPage = new RecojoView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
         private void MenPun(object sender, EventArgs e)
         {
-
+            Application.Current.MainPage = new PuntosMapaView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
         private void MenMan(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new ManualesView();
+            Application.Current.MainPage = new ManualesView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
         private void MenNot(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NoticiasView();
+            Application.Current.MainPage = new NoticiasView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
     }
 }

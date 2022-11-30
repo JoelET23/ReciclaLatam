@@ -40,7 +40,7 @@ namespace ReciclaLatam.ViewsModels
             {
                 if (Codigo == "Joel")
                 {
-                    Application.Current.MainPage = new InicioView();
+                    //Application.Current.MainPage = new InicioView();
                 }
                 else
                 {

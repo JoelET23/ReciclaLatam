@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReciclaLatam.Views.MisionView"
+             BackgroundColor="#FFFFFF">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android" Value="0,0,0,0"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <Grid Padding="15,0,15,0" RowSpacing="10" HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" VerticalOptions="Start">
+                <Frame Padding="0,15" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <Image WidthRequest="30" HeightRequest="40" Margin="0,0,15,0" Source="back.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="HomeBack"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Style="{StaticResource TituloNav}">Nosotros</Label>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackLayout Orientation="Horizontal">
+                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="NosotrosTbView"/>
+                        </Frame.GestureRecognizers>
+                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Nosotros</Label>
+                    </Frame>
+                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#3B5165">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MisionTbView"/>
+                        </Frame.GestureRecognizers>
+                        <Label Style="{StaticResource TituloTab}" TextColor="#FFFFFF">Misión</Label>
+                    </Frame>
+                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="VisionTbView"/>
+                        </Frame.GestureRecognizers>
+                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Visión</Label>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="2">
+                <ScrollView Margin="0,40,0,0" HeightRequest="620">
+                    <StackLayout Orientation="Vertical">
+                        <Image x:Name="ImgNos" Source="{Binding imagen}"/>
+                        <Label x:Name="TxtTitNot" Style="{StaticResource TituloBlog}"/>
+                        <Label x:Name="TxtDesNot" Style="{StaticResource DescripApp}"/>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
