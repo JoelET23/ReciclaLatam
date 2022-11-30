@@ -69,6 +69,8 @@ namespace ReciclaLatam.Views
             {
                 themeFile = reader.ReadToEnd();
                 map.MapStyle = MapStyle.FromJson(themeFile);
+                map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(28.12267, 82.29483), Distance.FromMeters(1000)), false);
+
             }
         }
 
