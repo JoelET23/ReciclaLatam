@@ -53,6 +53,9 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame HasShadow="False" Padding="0">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="RutaTap"/>
+                                    </Frame.GestureRecognizers>
                                     <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,0,0,20">
                                         <Frame WidthRequest="120" HasShadow="False" Padding="0">
                                             <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>

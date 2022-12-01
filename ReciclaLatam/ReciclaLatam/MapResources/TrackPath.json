@@ -1,78 +1,67 @@
 [
-  {
-    "Latitude": 28.12267,
-    "Longitude": 82.29483
-  },
-  {
-    "Latitude": 28.12306,
-    "Longitude": 82.29433
-  },
-  {
-    "Latitude": 28.12357,
-    "Longitude": 82.29379
-  },
-  {
-    "Latitude": 28.12369,
-    "Longitude": 82.29367
-  },
-  {
-    "Latitude": 28.12375,
-    "Longitude": 82.29365
-  },
-  {
-    "Latitude": 28.12386,
-    "Longitude": 82.29361
-  },
-  {
-    "Latitude": 28.12398,
-    "Longitude": 82.29367
-  },
-  {
-    "Latitude": 28.12442,
-    "Longitude": 82.29388
-  },
-  {
-    "Latitude": 28.12503,
-    "Longitude": 82.29415
-  },
-  {
-    "Latitude": 28.12562,
-    "Longitude": 82.29443
-  },
-  {
-    "Latitude": 28.12616,
-    "Longitude": 82.29467
-  },
-  {
-    "Latitude": 28.12902,
-    "Longitude": 82.29607
-  },
-  {
-    "Latitude": 28.13186,
-    "Longitude": 82.29739
-  },
-  {
-    "Latitude": 28.13326,
-    "Longitude": 82.29809
-  },
-  {
-    "Latitude": 28.13316,
-    "Longitude": 82.29852
-  },
-  {
-    "Latitude": 28.13303,
-    "Longitude": 82.2988
-  },
-  {
-    "Latitude": 28.13298,
-    "Longitude": 82.299
-  },
-  {
-    "Latitude": 28.13258,
-    "Longitude": 82.29989
-  },
-  {
-    "Latitude": 28.13258,
-    "Longitude": 82.2999
-  }
+    {
+        "Latitude": -12.127493,
+        "Longitude": -77.035401
+    },
+    {
+        "Latitude": -12.127262,
+        "Longitude": -77.034929
+    },
+    {
+        "Latitude": -12.126444,
+        "Longitude": -77.034478
+    },
+
+    {
+        "Latitude": -12.125710,
+        "Longitude": -77.033984
+    },
+    {
+        "Latitude": -12.125038,
+        "Longitude": -77.033469
+    },
+    {
+        "Latitude": -12.124220,
+        "Longitude": -77.032826
+    },
+    {
+        "Latitude": -12.123402,
+        "Longitude": -77.032118
+    },
+    {
+        "Latitude": -12.122647,
+        "Longitude": -77.031495
+    },
+    {
+        "Latitude": -12.122185,
+        "Longitude": -77.031173
+    },
+    {
+        "Latitude": -12.121718,
+        "Longitude": -77.030807
+    },
+    {
+        "Latitude": -12.121413,
+        "Longitude": -77.030550
+    },
+    {
+        "Latitude": -12.121015,
+        "Longitude": -77.030314
+    },
+    {
+        "Latitude": -12.120616,
+        "Longitude": -77.030002
+    },
+    {
+        "Latitude": -12.120118,
+        "Longitude": -77.029635
+    },
+    {
+        "Latitude": -12.119878,
+        "Longitude": -77.029452
+    },
+    {
+        "Latitude": -12.119632,
+        "Longitude": -77.029294
+    }
 ]

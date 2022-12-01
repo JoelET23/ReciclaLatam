@@ -10,116 +10,122 @@
         </OnPlatform>
     </ContentPage.Padding>
     <ContentPage.Content>
-        <Grid Padding="0,0,0,19" RowSpacing="10" HorizontalOptions="CenterAndExpand">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+        <ScrollView>
+            <Grid Padding="0,0,0,19" RowSpacing="10" HorizontalOptions="CenterAndExpand">
 
-            <Grid Grid.Row="0" WidthRequest="800" >
-                <Image Source="BgInicio.png" HeightRequest="10" Opacity="1.0" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
-                <StackLayout Orientation="Vertical" Padding="15,19,15,50">
-                    <Frame Padding="0" HasShadow="False" HeightRequest="60" BackgroundColor="Transparent">
-                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" Spacing="10">
-                            <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="Start">
-                                <Image WidthRequest="90" HeightRequest="40" HorizontalOptions="Start" Source="LogoIncio.png"/>
-                            </Frame>
-                            <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
-                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="End">
-                                    <Image WidthRequest="20" HeightRequest="20" Source="facebook.png"/>
-                                    <Image WidthRequest="20" HeightRequest="20" Source="instagram.png"/>
-                                    <Image WidthRequest="20" HeightRequest="20" Source="youtube.png"/>
-                                    <Image WidthRequest="20" HeightRequest="20" Source="linkedin.png"/>
-                                </StackLayout>
-                            </Frame>
-                        </StackLayout>
-                    </Frame>
-                    <Frame Padding="0" HasShadow="False" BackgroundColor="Transparent" Margin="0,0,0,20">
-                        <StackLayout Orientation="Horizontal" Spacing="10">
-                            <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0">
-                                <StackLayout Orientation="Horizontal" Spacing="5">
-                                    <Image WidthRequest="60" HeightRequest="60" HorizontalOptions="Start" Source="userInfo.png"/>
-                                    <Label x:Name="LblNomInicio" FontFamily="MontserratR" TextColor="#FFFFFF" VerticalOptions="Center" FontSize="18"/>
-                                </StackLayout>
-                            </Frame>
-                            <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
-                                <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="End">
-                                    <Image WidthRequest="40" HeightRequest="40" Source="notificacion.png"/>
-                                    <Image WidthRequest="40" HeightRequest="40" Source="ajustes.png">
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="ViewConfig"/>
-                                        </Image.GestureRecognizers>
-                                    </Image>
-                                </StackLayout>
-                            </Frame>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" WidthRequest="800" >
+                    <Image Source="BgInicio.png" HeightRequest="10" Opacity="1.0" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+                    <StackLayout Orientation="Vertical" Padding="15,19,15,50">
+                        <Frame Padding="0" HasShadow="False" HeightRequest="60" BackgroundColor="Transparent">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" Spacing="10">
+                                <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="Start">
+                                    <Image WidthRequest="90" HeightRequest="40" HorizontalOptions="Start" Source="LogoIncio.png"/>
+                                </Frame>
+                                <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
+                                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="End">
+                                        <Image WidthRequest="20" HeightRequest="20" Source="facebook.png"/>
+                                        <Image WidthRequest="20" HeightRequest="20" Source="instagram.png"/>
+                                        <Image WidthRequest="20" HeightRequest="20" Source="youtube.png"/>
+                                        <Image WidthRequest="20" HeightRequest="20" Source="linkedin.png"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Padding="0" HasShadow="False" BackgroundColor="Transparent" Margin="0,0,0,20">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0">
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Image WidthRequest="60" HeightRequest="60" HorizontalOptions="Start" Source="userInfo.png"/>
+                                        <Label x:Name="LblNomInicio" FontFamily="MontserratR" TextColor="#FFFFFF" VerticalOptions="Center" FontSize="18"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
+                                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="End">
+                                        <Image WidthRequest="40" HeightRequest="40" Source="notificacion.png"/>
+                                        <Image WidthRequest="40" HeightRequest="40" Source="ajustes.png">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ViewConfig"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="1" Padding="25,0,25,0" Margin="0,-50,0,0">
+                    <CollectionView ItemsSource="{Binding MenuInicio}" SelectionMode="Single" HeightRequest="300" x:Name="MenuInicioPage">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="20" HorizontalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame HasShadow="False" HeightRequest="30" Margin="0,10,10,0" CornerRadius="10">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="5">
+                                        <Image WidthRequest="28" HeightRequest="25" Source="{Binding Imagen}"/>
+                                        <Label Margin="10,0,0,0" TextColor="#25333F" FontFamily="MontserratB" VerticalOptions="Center" FontSize="15" Text="{Binding Nombre}"/>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+
+                <Grid Grid.Row="2" Padding="15,0,15,0">
+                    <StackLayout Orientation="Vertical">
+                        <Frame BackgroundColor="Transparent" HasShadow="False">
+                            <Label Style="{StaticResource TituloHmA}">Próximo recojo</Label>
+                        </Frame>
+                        <Frame BackgroundColor="Transparent" HasShadow="False" Padding="0" HeightRequest="100" CornerRadius="15">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="RutaTap"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Background="#FFFFFF" Padding="10" Orientation="Horizontal" VerticalOptions="Center" Spacing="10" Margin="0,0,0,20">
+                                <Frame WidthRequest="120" HasShadow="False" Padding="0">
+                                    <Image VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
+                                </Frame>
+                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
+                                    <StackLayout Orientation="Horizontal"  VerticalOptions="Center">
+                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
+                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame WidthRequest="340" HasShadow="False" Padding="0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
+                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame WidthRequest="100" HasShadow="False" Padding="0">
+                                    <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="3" Padding="15,0,15,0">
+                    <StackLayout Orientation="Vertical">
+                        <Frame BackgroundColor="Transparent" HasShadow="False" HorizontalOptions="Center">
+                            <StackLayout Orientation="Vertical">
+                                <Label Style="{StaticResource TituloHmA}">Con el apoyo de:</Label>
+                                <Image HorizontalOptions="Center" Source="pamolsa.png"/>
+                            </StackLayout>
+
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+
             </Grid>
-
-            <Grid Grid.Row="1" Padding="25,0,25,0" Margin="0,-50,0,0">
-                <CollectionView ItemsSource="{Binding MenuInicio}" SelectionMode="Single" HeightRequest="300" x:Name="MenuInicioPage">
-                    <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="20" HorizontalItemSpacing="10"/>
-                    </CollectionView.ItemsLayout>
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Frame HasShadow="False" HeightRequest="30" Margin="0,10,10,0" CornerRadius="10">
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="5">
-                                    <Image WidthRequest="30" HeightRequest="25" Source="{Binding Imagen}"/>
-                                    <Label Margin="10,0,0,0" TextColor="#25333F" FontFamily="MontserratB" VerticalOptions="Center" Text="{Binding Nombre}"/>
-                                </StackLayout>
-                            </Frame>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </Grid>
-
-            <Grid Grid.Row="2" Padding="15,0,15,0">
-                <StackLayout Orientation="Vertical">
-                    <Frame BackgroundColor="Transparent" HasShadow="False">
-                        <Label Style="{StaticResource TituloHmA}">Próximo recojo</Label>
-                    </Frame>
-                    <Frame BackgroundColor="Transparent" HasShadow="False" Padding="0" HeightRequest="100" CornerRadius="15">
-                        <StackLayout Background="#FFFFFF" Padding="10" Orientation="Horizontal" VerticalOptions="Center" Spacing="10" Margin="0,0,0,20">
-                            <Frame WidthRequest="120" HasShadow="False" Padding="0">
-                                <Image VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="RecojoIco.png"/>
-                            </Frame>
-                            <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                <StackLayout Orientation="Horizontal"  VerticalOptions="Center">
-                                    <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                    <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
-                                </StackLayout>
-                            </Frame>
-                            <Frame WidthRequest="340" HasShadow="False" Padding="0">
-                                <StackLayout Orientation="Horizontal">
-                                    <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                    <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
-                                </StackLayout>
-                            </Frame>
-                            <Frame WidthRequest="100" HasShadow="False" Padding="0">
-                                <Image WidthRequest="1" HeightRequest="1" Source="RecojoArrow.png"/>
-                            </Frame>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </Grid>
-
-            <Grid Grid.Row="3" Padding="15,0,15,0">
-                <StackLayout Orientation="Vertical">
-                    <Frame BackgroundColor="Transparent" HasShadow="False" HorizontalOptions="Center">
-                        <StackLayout Orientation="Vertical">
-                            <Label Style="{StaticResource TituloHmA}">Con el apoyo de:</Label>
-                            <Image HorizontalOptions="Center" Source="pamolsa.png"/>
-                        </StackLayout>
-                        
-                    </Frame>
-                </StackLayout>
-            </Grid>
-        </Grid>
-
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

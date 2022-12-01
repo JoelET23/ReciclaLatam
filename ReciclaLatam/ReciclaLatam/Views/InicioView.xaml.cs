@@ -14,6 +14,7 @@ namespace ReciclaLatam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InicioView : ContentPage
     {
+        #region Variables
         public string latitud;
         public string geolocalizacion;
         public string apellidos;
@@ -27,6 +28,7 @@ namespace ReciclaLatam.Views
         public string telefono;
         public string foto;
         public string longitud;
+        #endregion
 
         public InicioView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon)
         {
@@ -36,6 +38,7 @@ namespace ReciclaLatam.Views
 
             LblNomInicio.Text = "Hola, " + nom;
 
+            #region Variables2
             latitud = l;
             geolocalizacion = g;
             apellidos = ap;
@@ -49,6 +52,7 @@ namespace ReciclaLatam.Views
             telefono = tel;
             foto = fot;
             longitud = lon;
+            #endregion
         }
 
         private void MenuInicioChanged(object sender, SelectionChangedEventArgs e)
@@ -91,6 +95,11 @@ namespace ReciclaLatam.Views
         private void ViewConfig(object sender, EventArgs e)
         {
             Application.Current.MainPage = new ConfiguracionView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+        }
+
+        private void RutaTap(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new RutasView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
     }
 }

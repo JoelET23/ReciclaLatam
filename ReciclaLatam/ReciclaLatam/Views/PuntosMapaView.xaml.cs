@@ -187,7 +187,8 @@ namespace ReciclaLatam.Views
         void RutaVehiculo(System.Object sender, System.EventArgs e)
         {
         }
-            void StartRutaVehiculo()
+            
+        void StartRutaVehiculo()
         {
             var assembly = typeof(MainPage).GetTypeInfo().Assembly;
             var stream = assembly.GetManifestResourceStream($"ReciclaLatam.MapResources.TrackPath.json");
