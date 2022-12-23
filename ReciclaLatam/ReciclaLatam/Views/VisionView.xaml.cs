@@ -89,5 +89,9 @@ namespace ReciclaLatam.Views
         {
             Application.Current.MainPage = new VisionView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
+        private void PalmosaTbView(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new PalmosaView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+        }
     }
 }

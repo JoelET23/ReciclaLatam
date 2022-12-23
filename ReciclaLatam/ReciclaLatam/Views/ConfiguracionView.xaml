@@ -44,6 +44,9 @@
                                 <Image HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" Source="ConGeo.png"/>
                             </Frame>
                             <Frame WidthRequest="520" HasShadow="False" Padding="0" HorizontalOptions="Start">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGeo"/>
+                                </Frame.GestureRecognizers>
                                 <Label Style="{StaticResource TituloConfig}">Habilitar geolocalización</Label>
                             </Frame>
                             <Frame WidthRequest="30" HasShadow="False" Padding="0">

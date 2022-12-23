@@ -25,6 +25,197 @@ namespace ReciclaLatam.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.Geolocator.Resource.Attribute.alpha = global::ReciclaLatam.Droid.Resource.Attribute.alpha;
+			global::Plugin.Geolocator.Resource.Attribute.font = global::ReciclaLatam.Droid.Resource.Attribute.font;
+			global::Plugin.Geolocator.Resource.Attribute.fontProviderAuthority = global::ReciclaLatam.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.Geolocator.Resource.Attribute.fontProviderCerts = global::ReciclaLatam.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.Geolocator.Resource.Attribute.fontProviderFetchStrategy = global::ReciclaLatam.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.Geolocator.Resource.Attribute.fontProviderFetchTimeout = global::ReciclaLatam.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.Geolocator.Resource.Attribute.fontProviderPackage = global::ReciclaLatam.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.Geolocator.Resource.Attribute.fontProviderQuery = global::ReciclaLatam.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.Geolocator.Resource.Attribute.fontStyle = global::ReciclaLatam.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.Geolocator.Resource.Attribute.fontVariationSettings = global::ReciclaLatam.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.Geolocator.Resource.Attribute.fontWeight = global::ReciclaLatam.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.Geolocator.Resource.Attribute.ttcIndex = global::ReciclaLatam.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.Geolocator.Resource.Color.androidx_core_ripple_material_light = global::ReciclaLatam.Droid.Resource.Color.androidx_core_ripple_material_light;
+			global::Plugin.Geolocator.Resource.Color.androidx_core_secondary_text_default_material_light = global::ReciclaLatam.Droid.Resource.Color.androidx_core_secondary_text_default_material_light;
+			global::Plugin.Geolocator.Resource.Color.browser_actions_bg_grey = global::ReciclaLatam.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Plugin.Geolocator.Resource.Color.browser_actions_divider_color = global::ReciclaLatam.Droid.Resource.Color.browser_actions_divider_color;
+			global::Plugin.Geolocator.Resource.Color.browser_actions_text_color = global::ReciclaLatam.Droid.Resource.Color.browser_actions_text_color;
+			global::Plugin.Geolocator.Resource.Color.browser_actions_title_color = global::ReciclaLatam.Droid.Resource.Color.browser_actions_title_color;
+			global::Plugin.Geolocator.Resource.Color.notification_action_color_filter = global::ReciclaLatam.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.Geolocator.Resource.Color.notification_icon_bg_color = global::ReciclaLatam.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.Geolocator.Resource.Dimension.browser_actions_context_menu_max_width = global::ReciclaLatam.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Plugin.Geolocator.Resource.Dimension.browser_actions_context_menu_min_padding = global::ReciclaLatam.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Plugin.Geolocator.Resource.Dimension.compat_button_inset_horizontal_material = global::ReciclaLatam.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.Geolocator.Resource.Dimension.compat_button_inset_vertical_material = global::ReciclaLatam.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.Geolocator.Resource.Dimension.compat_button_padding_horizontal_material = global::ReciclaLatam.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.Geolocator.Resource.Dimension.compat_button_padding_vertical_material = global::ReciclaLatam.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.Geolocator.Resource.Dimension.compat_control_corner_material = global::ReciclaLatam.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.Geolocator.Resource.Dimension.compat_notification_large_icon_max_height = global::ReciclaLatam.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.Geolocator.Resource.Dimension.compat_notification_large_icon_max_width = global::ReciclaLatam.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.Geolocator.Resource.Dimension.notification_action_icon_size = global::ReciclaLatam.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.Geolocator.Resource.Dimension.notification_action_text_size = global::ReciclaLatam.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.Geolocator.Resource.Dimension.notification_big_circle_margin = global::ReciclaLatam.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.Geolocator.Resource.Dimension.notification_content_margin_start = global::ReciclaLatam.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.Geolocator.Resource.Dimension.notification_large_icon_height = global::ReciclaLatam.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Geolocator.Resource.Dimension.notification_large_icon_width = global::ReciclaLatam.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Geolocator.Resource.Dimension.notification_main_column_padding_top = global::ReciclaLatam.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.Geolocator.Resource.Dimension.notification_media_narrow_margin = global::ReciclaLatam.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.Geolocator.Resource.Dimension.notification_right_icon_size = global::ReciclaLatam.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.Geolocator.Resource.Dimension.notification_right_side_padding_top = global::ReciclaLatam.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.Geolocator.Resource.Dimension.notification_small_icon_background_padding = global::ReciclaLatam.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.Geolocator.Resource.Dimension.notification_small_icon_size_as_large = global::ReciclaLatam.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.Geolocator.Resource.Dimension.notification_subtext_size = global::ReciclaLatam.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Geolocator.Resource.Dimension.notification_top_pad = global::ReciclaLatam.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.Geolocator.Resource.Dimension.notification_top_pad_large_text = global::ReciclaLatam.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.Geolocator.Resource.Drawable.notification_action_background = global::ReciclaLatam.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.Geolocator.Resource.Drawable.notification_bg = global::ReciclaLatam.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.Geolocator.Resource.Drawable.notification_bg_low = global::ReciclaLatam.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.Geolocator.Resource.Drawable.notification_bg_low_normal = global::ReciclaLatam.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.Geolocator.Resource.Drawable.notification_bg_low_pressed = global::ReciclaLatam.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.Geolocator.Resource.Drawable.notification_bg_normal = global::ReciclaLatam.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.Geolocator.Resource.Drawable.notification_bg_normal_pressed = global::ReciclaLatam.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.Geolocator.Resource.Drawable.notification_icon_background = global::ReciclaLatam.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.Geolocator.Resource.Drawable.notification_template_icon_bg = global::ReciclaLatam.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Geolocator.Resource.Drawable.notification_template_icon_low_bg = global::ReciclaLatam.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.Geolocator.Resource.Drawable.notification_tile_bg = global::ReciclaLatam.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.Geolocator.Resource.Drawable.notify_panel_notification_icon_bg = global::ReciclaLatam.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.Geolocator.Resource.Id.accessibility_action_clickable_span = global::ReciclaLatam.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_0 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_1 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_10 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_11 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_12 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_13 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_14 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_15 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_16 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_17 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_18 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_19 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_2 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_20 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_21 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_22 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_23 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_24 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_25 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_26 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_27 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_28 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_29 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_3 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_30 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_31 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_4 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_5 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_6 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_7 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_8 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Plugin.Geolocator.Resource.Id.accessibility_custom_action_9 = global::ReciclaLatam.Droid.Resource.Id.accessibility_custom_action_9;
+			global::Plugin.Geolocator.Resource.Id.actions = global::ReciclaLatam.Droid.Resource.Id.actions;
+			global::Plugin.Geolocator.Resource.Id.action_container = global::ReciclaLatam.Droid.Resource.Id.action_container;
+			global::Plugin.Geolocator.Resource.Id.action_divider = global::ReciclaLatam.Droid.Resource.Id.action_divider;
+			global::Plugin.Geolocator.Resource.Id.action_image = global::ReciclaLatam.Droid.Resource.Id.action_image;
+			global::Plugin.Geolocator.Resource.Id.action_text = global::ReciclaLatam.Droid.Resource.Id.action_text;
+			global::Plugin.Geolocator.Resource.Id.async = global::ReciclaLatam.Droid.Resource.Id.async;
+			global::Plugin.Geolocator.Resource.Id.blocking = global::ReciclaLatam.Droid.Resource.Id.blocking;
+			global::Plugin.Geolocator.Resource.Id.browser_actions_header_text = global::ReciclaLatam.Droid.Resource.Id.browser_actions_header_text;
+			global::Plugin.Geolocator.Resource.Id.browser_actions_menu_items = global::ReciclaLatam.Droid.Resource.Id.browser_actions_menu_items;
+			global::Plugin.Geolocator.Resource.Id.browser_actions_menu_item_icon = global::ReciclaLatam.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Plugin.Geolocator.Resource.Id.browser_actions_menu_item_text = global::ReciclaLatam.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Plugin.Geolocator.Resource.Id.browser_actions_menu_view = global::ReciclaLatam.Droid.Resource.Id.browser_actions_menu_view;
+			global::Plugin.Geolocator.Resource.Id.chronometer = global::ReciclaLatam.Droid.Resource.Id.chronometer;
+			global::Plugin.Geolocator.Resource.Id.dialog_button = global::ReciclaLatam.Droid.Resource.Id.dialog_button;
+			global::Plugin.Geolocator.Resource.Id.forever = global::ReciclaLatam.Droid.Resource.Id.forever;
+			global::Plugin.Geolocator.Resource.Id.icon = global::ReciclaLatam.Droid.Resource.Id.icon;
+			global::Plugin.Geolocator.Resource.Id.icon_group = global::ReciclaLatam.Droid.Resource.Id.icon_group;
+			global::Plugin.Geolocator.Resource.Id.info = global::ReciclaLatam.Droid.Resource.Id.info;
+			global::Plugin.Geolocator.Resource.Id.italic = global::ReciclaLatam.Droid.Resource.Id.italic;
+			global::Plugin.Geolocator.Resource.Id.line1 = global::ReciclaLatam.Droid.Resource.Id.line1;
+			global::Plugin.Geolocator.Resource.Id.line3 = global::ReciclaLatam.Droid.Resource.Id.line3;
+			global::Plugin.Geolocator.Resource.Id.normal = global::ReciclaLatam.Droid.Resource.Id.normal;
+			global::Plugin.Geolocator.Resource.Id.notification_background = global::ReciclaLatam.Droid.Resource.Id.notification_background;
+			global::Plugin.Geolocator.Resource.Id.notification_main_column = global::ReciclaLatam.Droid.Resource.Id.notification_main_column;
+			global::Plugin.Geolocator.Resource.Id.notification_main_column_container = global::ReciclaLatam.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.Geolocator.Resource.Id.right_icon = global::ReciclaLatam.Droid.Resource.Id.right_icon;
+			global::Plugin.Geolocator.Resource.Id.right_side = global::ReciclaLatam.Droid.Resource.Id.right_side;
+			global::Plugin.Geolocator.Resource.Id.tag_accessibility_actions = global::ReciclaLatam.Droid.Resource.Id.tag_accessibility_actions;
+			global::Plugin.Geolocator.Resource.Id.tag_accessibility_clickable_spans = global::ReciclaLatam.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Plugin.Geolocator.Resource.Id.tag_accessibility_heading = global::ReciclaLatam.Droid.Resource.Id.tag_accessibility_heading;
+			global::Plugin.Geolocator.Resource.Id.tag_accessibility_pane_title = global::ReciclaLatam.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Plugin.Geolocator.Resource.Id.tag_screen_reader_focusable = global::ReciclaLatam.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::Plugin.Geolocator.Resource.Id.tag_transition_group = global::ReciclaLatam.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.Geolocator.Resource.Id.tag_unhandled_key_event_manager = global::ReciclaLatam.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.Geolocator.Resource.Id.tag_unhandled_key_listeners = global::ReciclaLatam.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.Geolocator.Resource.Id.text = global::ReciclaLatam.Droid.Resource.Id.text;
+			global::Plugin.Geolocator.Resource.Id.text2 = global::ReciclaLatam.Droid.Resource.Id.text2;
+			global::Plugin.Geolocator.Resource.Id.time = global::ReciclaLatam.Droid.Resource.Id.time;
+			global::Plugin.Geolocator.Resource.Id.title = global::ReciclaLatam.Droid.Resource.Id.title;
+			global::Plugin.Geolocator.Resource.Id.view_tree_lifecycle_owner = global::ReciclaLatam.Droid.Resource.Id.view_tree_lifecycle_owner;
+			global::Plugin.Geolocator.Resource.Integer.status_bar_notification_info_maxnum = global::ReciclaLatam.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Geolocator.Resource.Layout.browser_actions_context_menu_page = global::ReciclaLatam.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Plugin.Geolocator.Resource.Layout.browser_actions_context_menu_row = global::ReciclaLatam.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Plugin.Geolocator.Resource.Layout.custom_dialog = global::ReciclaLatam.Droid.Resource.Layout.custom_dialog;
+			global::Plugin.Geolocator.Resource.Layout.notification_action = global::ReciclaLatam.Droid.Resource.Layout.notification_action;
+			global::Plugin.Geolocator.Resource.Layout.notification_action_tombstone = global::ReciclaLatam.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.Geolocator.Resource.Layout.notification_template_custom_big = global::ReciclaLatam.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.Geolocator.Resource.Layout.notification_template_icon_group = global::ReciclaLatam.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.Geolocator.Resource.Layout.notification_template_part_chronometer = global::ReciclaLatam.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Geolocator.Resource.Layout.notification_template_part_time = global::ReciclaLatam.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.Geolocator.Resource.String.copy_toast_msg = global::ReciclaLatam.Droid.Resource.String.copy_toast_msg;
+			global::Plugin.Geolocator.Resource.String.fallback_menu_item_copy_link = global::ReciclaLatam.Droid.Resource.String.fallback_menu_item_copy_link;
+			global::Plugin.Geolocator.Resource.String.fallback_menu_item_open_in_browser = global::ReciclaLatam.Droid.Resource.String.fallback_menu_item_open_in_browser;
+			global::Plugin.Geolocator.Resource.String.fallback_menu_item_share_link = global::ReciclaLatam.Droid.Resource.String.fallback_menu_item_share_link;
+			global::Plugin.Geolocator.Resource.String.status_bar_notification_info_overflow = global::ReciclaLatam.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Geolocator.Resource.Style.TextAppearance_Compat_Notification = global::ReciclaLatam.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.Geolocator.Resource.Style.TextAppearance_Compat_Notification_Info = global::ReciclaLatam.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.Geolocator.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::ReciclaLatam.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.Geolocator.Resource.Style.TextAppearance_Compat_Notification_Time = global::ReciclaLatam.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.Geolocator.Resource.Style.TextAppearance_Compat_Notification_Title = global::ReciclaLatam.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.Geolocator.Resource.Style.Widget_Compat_NotificationActionContainer = global::ReciclaLatam.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.Geolocator.Resource.Style.Widget_Compat_NotificationActionText = global::ReciclaLatam.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.Geolocator.Resource.Styleable.ColorStateListItem = global::ReciclaLatam.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.Geolocator.Resource.Styleable.ColorStateListItem_alpha = global::ReciclaLatam.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.Geolocator.Resource.Styleable.ColorStateListItem_android_alpha = global::ReciclaLatam.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.Geolocator.Resource.Styleable.ColorStateListItem_android_color = global::ReciclaLatam.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamily = global::ReciclaLatam.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_android_font = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_android_fontStyle = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_android_fontWeight = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_font = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_fontStyle = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_fontWeight = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamilyFont_ttcIndex = global::ReciclaLatam.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamily_fontProviderAuthority = global::ReciclaLatam.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamily_fontProviderCerts = global::ReciclaLatam.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::ReciclaLatam.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::ReciclaLatam.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamily_fontProviderPackage = global::ReciclaLatam.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.Geolocator.Resource.Styleable.FontFamily_fontProviderQuery = global::ReciclaLatam.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColorItem = global::ReciclaLatam.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColorItem_android_color = global::ReciclaLatam.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColorItem_android_offset = global::ReciclaLatam.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_centerColor = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_centerX = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_centerY = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_endColor = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_endX = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_endY = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_gradientRadius = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_startColor = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_startX = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_startY = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_tileMode = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.Geolocator.Resource.Styleable.GradientColor_android_type = global::ReciclaLatam.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.Geolocator.Resource.Xml.image_share_filepaths = global::ReciclaLatam.Droid.Resource.Xml.image_share_filepaths;
+			global::Plugin.Geolocator.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::ReciclaLatam.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::ReciclaLatam.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::ReciclaLatam.Droid.Resource.Attribute.font;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::ReciclaLatam.Droid.Resource.Attribute.fontProviderAuthority;
@@ -16865,145 +17056,154 @@ namespace ReciclaLatam.Droid
 			public const int miinfo = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int mtrl_dialog_background = 2131165352;
+			public const int MisionImg = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int mtrl_dropdown_arrow = 2131165353;
+			public const int mtrl_dialog_background = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int mtrl_ic_arrow_drop_down = 2131165354;
+			public const int mtrl_dropdown_arrow = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int mtrl_ic_arrow_drop_up = 2131165355;
+			public const int mtrl_ic_arrow_drop_down = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int mtrl_ic_cancel = 2131165356;
+			public const int mtrl_ic_arrow_drop_up = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int mtrl_ic_error = 2131165357;
+			public const int mtrl_ic_cancel = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int mtrl_navigation_bar_item_background = 2131165358;
+			public const int mtrl_ic_error = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int mtrl_popupmenu_background = 2131165359;
+			public const int mtrl_navigation_bar_item_background = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int mtrl_popupmenu_background_dark = 2131165360;
+			public const int mtrl_popupmenu_background = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int mtrl_tabs_default_indicator = 2131165361;
+			public const int mtrl_popupmenu_background_dark = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int navigation_empty_icon = 2131165362;
+			public const int mtrl_tabs_default_indicator = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int nosotros = 2131165363;
+			public const int navigation_empty_icon = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int NosotrosImg = 2131165364;
+			public const int NosImg = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int Noticia1 = 2131165365;
+			public const int nosotros = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int Noticia2 = 2131165366;
+			public const int NosotrosImg = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int noticias = 2131165367;
+			public const int Noticia1 = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int notificacion = 2131165368;
+			public const int Noticia2 = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int notification_action_background = 2131165369;
+			public const int noticias = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int notification_bg = 2131165370;
+			public const int notificacion = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int notification_bg_low = 2131165371;
+			public const int notification_action_background = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int notification_bg_low_normal = 2131165372;
+			public const int notification_bg = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int notification_bg_low_pressed = 2131165373;
+			public const int notification_bg_low = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int notification_bg_normal = 2131165374;
+			public const int notification_bg_low_normal = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int notification_bg_normal_pressed = 2131165375;
+			public const int notification_bg_low_pressed = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int notification_icon_background = 2131165376;
+			public const int notification_bg_normal = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int notification_template_icon_bg = 2131165377;
+			public const int notification_bg_normal_pressed = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int notification_template_icon_low_bg = 2131165378;
+			public const int notification_icon_background = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int notification_tile_bg = 2131165379;
+			public const int notification_template_icon_bg = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int notify_panel_notification_icon_bg = 2131165380;
+			public const int notification_template_icon_low_bg = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int olvide = 2131165381;
+			public const int notification_tile_bg = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int pamolsa = 2131165382;
+			public const int notify_panel_notification_icon_bg = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int personaInf = 2131165383;
+			public const int olvide = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int preference_list_divider_material = 2131165384;
+			public const int pamolsa = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int puntos = 2131165385;
+			public const int personaInf = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int recojo = 2131165386;
+			public const int preference_list_divider_material = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int RecojoArrow = 2131165387;
+			public const int puntos = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int RecojoCalen = 2131165388;
+			public const int recojo = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int RecojoHora = 2131165389;
+			public const int RecojoArrow = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int RecojoIco = 2131165390;
+			public const int RecojoCalen = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int SesionGoogle = 2131165391;
+			public const int RecojoHora = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int Splash = 2131165392;
+			public const int RecojoIco = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int test_custom_background = 2131165393;
+			public const int SesionGoogle = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int tooltip_frame_dark = 2131165394;
+			public const int Splash = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int tooltip_frame_light = 2131165395;
+			public const int test_custom_background = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int User = 2131165396;
+			public const int tooltip_frame_dark = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int userInfo = 2131165397;
+			public const int tooltip_frame_light = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int youtube = 2131165398;
+			public const int User = 2131165398;
+			
+			// aapt resource value: 0x7F0700D7
+			public const int userInfo = 2131165399;
+			
+			// aapt resource value: 0x7F0700D8
+			public const int VisionImg = 2131165400;
+			
+			// aapt resource value: 0x7F0700D9
+			public const int youtube = 2131165401;
 			
 			static Drawable()
 			{

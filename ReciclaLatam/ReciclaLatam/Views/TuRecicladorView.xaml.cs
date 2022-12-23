@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ReciclaLatam.ApiRest;
+using ReciclaLatam.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,7 +43,20 @@ namespace ReciclaLatam.Views
             telefono = tel;
             foto = fot;
             longitud = lon;
+
+            getReciclador();
         }
+
+        private async void getReciclador()
+        {
+            ApiReciclador objApiNoticias = new ApiReciclador();
+            Task<RecicladorInfoLista> returnNoticiasLista = objApiNoticias.WebApi();
+            RecicladorInfoLista objNoticiasLista = await returnNoticiasLista;
+
+            NoticiaPage.ItemsSource = objNoticiasLista.Items;
+        }
+
+
         private void ConfiguracionTap(object sender, EventArgs e)
         {
             Application.Current.MainPage = new NoticiasView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);

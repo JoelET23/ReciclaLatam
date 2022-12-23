@@ -53,9 +53,15 @@ namespace ReciclaLatam.Views
         {
             Application.Current.MainPage = new MiInfoView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
+        private void TapGeo(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new GeolocalizacionView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+        }
         private void CerrarTap(object sender, EventArgs e)
         {
             Application.Current.MainPage = new LoginView();
         }
+
+        
     }
 }

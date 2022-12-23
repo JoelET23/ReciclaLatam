@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using ReciclaLatam.ApiRest;
+﻿using ReciclaLatam.ApiRest;
 using ReciclaLatam.Models;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace ReciclaLatam.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NosotrosView : ContentPage
+    public partial class PalmosaView : ContentPage
     {
         #region Variables
         public string latitud;
@@ -30,8 +29,7 @@ namespace ReciclaLatam.Views
         public string foto;
         public string longitud;
         #endregion
-
-        public NosotrosView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon)
+        public PalmosaView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon)
         {
             InitializeComponent();
             getNosotros();
@@ -52,6 +50,7 @@ namespace ReciclaLatam.Views
             longitud = lon;
             #endregion
         }
+
         private async void getNosotros()
         {
             ApiNosotros objApiNosotros = new ApiNosotros();
@@ -62,14 +61,15 @@ namespace ReciclaLatam.Views
             {
                 switch (nosotros.tipo_nosotros)
                 {
-                    case 1:
+                    case 4:
                         ImgNos.Source = nosotros.imagen;
                         TxtTitNot.Text = nosotros.titulo;
                         TxtDesNot.Text = nosotros.descripcion;
-                    break;
+                        break;
                 }
             }
         }
+
         private void HomeBack(object sender, EventArgs e)
         {
             Application.Current.MainPage = new InicioView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);

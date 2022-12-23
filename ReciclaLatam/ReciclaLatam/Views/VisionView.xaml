@@ -28,26 +28,34 @@
                 </Frame>
             </Grid>
             <Grid Grid.Row="1">
-                <StackLayout Orientation="Horizontal">
-                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="NosotrosTbView"/>
-                        </Frame.GestureRecognizers>
-                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Nosotros</Label>
-                    </Frame>
-                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="MisionTbView"/>
-                        </Frame.GestureRecognizers>
-                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Misión</Label>
-                    </Frame>
-                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#3B5165">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="VisionTbView"/>
-                        </Frame.GestureRecognizers>
-                        <Label Style="{StaticResource TituloTab}" TextColor="#FFFFFF">Visión</Label>
-                    </Frame>
-                </StackLayout>
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" WidthRequest="500">
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NosotrosTbView"/>
+                            </Frame.GestureRecognizers>
+                            <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Nosotros</Label>
+                        </Frame>
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MisionTbView"/>
+                            </Frame.GestureRecognizers>
+                            <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Misión</Label>
+                        </Frame>
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#3B5165">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="VisionTbView"/>
+                            </Frame.GestureRecognizers>
+                            <Label Style="{StaticResource TituloTab}" TextColor="#FFFFFF">Visión</Label>
+                        </Frame>
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="PalmosaTbView"/>
+                            </Frame.GestureRecognizers>
+                            <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Palmosa</Label>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
             </Grid>
             <Grid Grid.Row="2">
                 <ScrollView Margin="0,40,0,0" HeightRequest="620">

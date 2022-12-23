@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ReciclaLatam.Views.NosotrosView"
+             x:Class="ReciclaLatam.Views.PalmosaView"
              BackgroundColor="#FFFFFF">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -30,31 +30,31 @@
             <Grid Grid.Row="1">
                 <ScrollView Orientation="Horizontal">
                     <StackLayout Orientation="Horizontal" WidthRequest="500">
-                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#3B5165">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="NosotrosTbView"/>
-                        </Frame.GestureRecognizers>
-                        <Label Style="{StaticResource TituloTab}" TextColor="#FFFFFF">Nosotros</Label>
-                    </Frame>
-                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="MisionTbView"/>
-                        </Frame.GestureRecognizers>
-                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Misión</Label>
-                    </Frame>
-                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="VisionTbView"/>
-                        </Frame.GestureRecognizers>
-                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Visión</Label>
-                    </Frame>
-                    <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="PalmosaTbView"/>
-                        </Frame.GestureRecognizers>
-                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Palmosa</Label>
-                    </Frame>
-                </StackLayout>
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="NosotrosTbView"/>
+                            </Frame.GestureRecognizers>
+                            <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Nosotros</Label>
+                        </Frame>
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MisionTbView"/>
+                            </Frame.GestureRecognizers>
+                            <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Misión</Label>
+                        </Frame>
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#E5F2F7">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="VisionTbView"/>
+                            </Frame.GestureRecognizers>
+                            <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Visión</Label>
+                        </Frame>
+                        <Frame Padding="25,5" HeightRequest="30" CornerRadius="50" BackgroundColor="#3B5165">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="PalmosaTbView"/>
+                            </Frame.GestureRecognizers>
+                            <Label Style="{StaticResource TituloTab}" TextColor="#FFFFFF">Palmosa</Label>
+                        </Frame>
+                    </StackLayout>
                 </ScrollView>
             </Grid>
             <Grid Grid.Row="2">
@@ -66,7 +66,7 @@
                     </StackLayout>
                 </ScrollView>
             </Grid>
-            
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
