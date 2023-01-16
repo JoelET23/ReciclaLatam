@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -100,6 +100,30 @@ namespace ReciclaLatam.Views
         private void RutaTap(object sender, EventArgs e)
         {
             Application.Current.MainPage = new RutasView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+        }
+        private void LinkFace(object sender, EventArgs e)
+        {
+            var url = "https://www.facebook.com/ReciclaLatamPe";
+            Launcher.OpenAsync(new Uri(url));
+            //Device.OpenUri(new Uri(url));
+        }
+        private void LinkInst(object sender, EventArgs e)
+        {
+            var url = "https://www.instagram.com/reciclape_peru";
+            Launcher.OpenAsync(new Uri(url));
+            //Device.OpenUri(new Uri(url));
+        }
+        private void LinkYout(object sender, EventArgs e)
+        {
+            var url = "https://www.youtube.com/channel/UCOT0cMWji4dfSw5imh7vtkw";
+            Launcher.OpenAsync(new Uri(url));
+            //Device.OpenUri(new Uri(url));
+        }
+        private void LinkLink(object sender, EventArgs e)
+        {
+            var url = "https://www.linkedin.com/company/reciclalatam";
+            Launcher.OpenAsync(new Uri(url));
+            //Device.OpenUri(new Uri(url));
         }
     }
 }

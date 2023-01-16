@@ -31,10 +31,26 @@
                                 </Frame>
                                 <Frame HasShadow="False" BackgroundColor="Transparent" WidthRequest="400" Padding="0" HorizontalOptions="End">
                                     <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="End">
-                                        <Image WidthRequest="20" HeightRequest="20" Source="facebook.png"/>
-                                        <Image WidthRequest="20" HeightRequest="20" Source="instagram.png"/>
-                                        <Image WidthRequest="20" HeightRequest="20" Source="youtube.png"/>
-                                        <Image WidthRequest="20" HeightRequest="20" Source="linkedin.png"/>
+                                        <Image WidthRequest="20" HeightRequest="20" Source="facebook.png">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="LinkFace"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Image WidthRequest="20" HeightRequest="20" Source="instagram.png">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="LinkInst"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Image WidthRequest="20" HeightRequest="20" Source="youtube.png">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="LinkYout"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Image WidthRequest="20" HeightRequest="20" Source="linkedin.png">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="LinkLink"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
                                     </StackLayout>
                                 </Frame>
                             </StackLayout>
@@ -117,10 +133,12 @@
                     <StackLayout Orientation="Vertical">
                         <Frame BackgroundColor="Transparent" HasShadow="False" HorizontalOptions="Center">
                             <StackLayout Orientation="Vertical">
-                                <Label Style="{StaticResource TituloHmA}">Con el apoyo de:</Label>
-                                <Image HorizontalOptions="Center" Source="pamolsa.png"/>
+                                <Label Style="{StaticResource TituloHmA}" HorizontalOptions="Center">Con el apoyo de:</Label>
+                                <StackLayout Margin="10, 0, 0, 0" Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Image HeightRequest="80" Margin="0, 15, 0, 0" VerticalOptions="Start" Source="pamolsa.png"/>
+                                    <Image HeightRequest="80" Margin="10,15,0,0" WidthRequest="120" Source="LogoMir.png"/>
+                                </StackLayout>
                             </StackLayout>
-
                         </Frame>
                     </StackLayout>
                 </Grid>
