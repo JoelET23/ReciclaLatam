@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Timers;
 using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
 using Xamarin.Forms.Xaml;
@@ -43,9 +43,59 @@ namespace ReciclaLatam.Views
 
             BindingContext = PuntosMapaVM_ = new PuntosMapaVM();
 
-            //UbicacionReal();
             ApplyMapTheme();
 
+            Device.StartTimer(TimeSpan.FromSeconds(5), () =>
+            {
+                Task.Run(async () =>
+                {
+                    var locator = CrossGeolocator.Current;
+                    locator.DesiredAccuracy = 50;
+                    if (locator.IsGeolocationAvailable)
+                    {
+                        if (locator.IsGeolocationEnabled)
+                        {
+                            if (!locator.IsListening)
+                            {
+                                await locator.StartListeningAsync(TimeSpan.FromSeconds(1), 5);
+                            }
+                            locator.PositionChanged += (cambio, args) =>
+                            {
+                                var loc = args.Position;
+
+                                /*LonMp.Text = loc.Longitude.ToString();
+                                latitudMap = double.Parse(LonMp.Text);*/
+                                latitudMap = loc.Latitude;
+
+                                /*LatMp.Text = loc.Latitude.ToString();
+                                longuitudMap = double.Parse(LatMp.Text);*/
+                                longuitudMap = loc.Longitude;
+
+
+
+
+                                Pin VehiclePins = new Pin()
+                                {
+                                    Label = "Mi ubicación",
+                                    Type = PinType.Place,
+                                    Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("PickupPin.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "PickupPin.png", WidthRequest = 60, HeightRequest = 60 }),
+                                    Position = new Position(latitudMap, longuitudMap),
+                                };
+                                map.Pins.Add(VehiclePins);
+
+                                //This is your location and it should be near to your car location.
+                                var positions = new Position(latitudMap, longuitudMap);//Latitude, Longitude
+                                map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(500)));
+
+                            };
+                        }
+                    }
+                    //await DisplayAlert("Mesaje", "Prueba", "Ok");
+                    //var time = await GetRutas();
+                    // do something with time...
+                });
+                return true;
+            });
 
             #region Variables2
             latitud = l;
@@ -64,10 +114,6 @@ namespace ReciclaLatam.Views
             #endregion
         }
 
-        /*private async void UbicacionReal()
-        {
-            
-        }*/
 
         private void ApplyMapTheme()
         {
@@ -82,7 +128,7 @@ namespace ReciclaLatam.Views
 
             }*/
 
-            GetRutas();
+            //GetRutas();
 
         }
 

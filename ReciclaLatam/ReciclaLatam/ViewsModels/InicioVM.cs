@@ -32,12 +32,12 @@ namespace ReciclaLatam.ViewsModels
                     Nombre = "Manuales",
                     Imagen = "manuales.png"
                 },
-                new MenuInicioModels
+                /*new MenuInicioModels
                 {
                     Id = 4,
                     Nombre = "Noticias",
                     Imagen = "noticias.png"
-                },
+                },*/
                 new MenuInicioModels
                 {
                     Id = 5,

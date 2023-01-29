@@ -60,7 +60,7 @@
             <Grid Grid.Row="2">
                 <ScrollView Margin="0,40,0,0" HeightRequest="620">
                     <StackLayout Orientation="Vertical">
-                        <Image x:Name="ImgNos" Source="{Binding imagen}"/>
+                        <Image Margin="0,0,0,30" x:Name="ImgNos" Source="{Binding imagen}"/>
                         <Label x:Name="TxtTitNot" Style="{StaticResource TituloBlog}"/>
                         <Label x:Name="TxtDesNot" Style="{StaticResource DescripApp}"/>
                     </StackLayout>
