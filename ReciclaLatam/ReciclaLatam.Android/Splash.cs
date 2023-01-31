@@ -23,7 +23,7 @@ namespace ReciclaLatam.Droid
         }
     }*/
 
-    [Activity(Label = "Recicla Latam", Icon = "@drawable/icon", Theme = "@style/SplashScreen", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "Recicla Latam", Icon = "@drawable/iconorecicla", Theme = "@style/SplashScreen", MainLauncher = true, NoHistory = true)]
     public class Splash : AppCompatActivity
     {
         protected override void OnResume()

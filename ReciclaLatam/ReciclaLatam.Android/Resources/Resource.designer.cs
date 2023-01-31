@@ -16951,37 +16951,37 @@ namespace ReciclaLatam.Droid
 			public const int facebook = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int FaviconApp = 2131165317;
+			public const int googleg_disabled_color_18 = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int googleg_disabled_color_18 = 2131165318;
-			
-			// aapt resource value: 0x7F070087
-			public const int googleg_standard_color_18 = 2131165319;
-			
-			// aapt resource value: 0x7F07008F
-			public const int icon = 2131165327;
-			
-			// aapt resource value: 0x7F070088
-			public const int ic_arrow_down_24dp = 2131165320;
-			
-			// aapt resource value: 0x7F070089
-			public const int ic_clock_black_24dp = 2131165321;
-			
-			// aapt resource value: 0x7F07008A
-			public const int ic_keyboard_black_24dp = 2131165322;
-			
-			// aapt resource value: 0x7F07008B
-			public const int ic_mtrl_checked_circle = 2131165323;
-			
-			// aapt resource value: 0x7F07008C
-			public const int ic_mtrl_chip_checked_black = 2131165324;
-			
-			// aapt resource value: 0x7F07008D
-			public const int ic_mtrl_chip_checked_circle = 2131165325;
+			public const int googleg_standard_color_18 = 2131165318;
 			
 			// aapt resource value: 0x7F07008E
-			public const int ic_mtrl_chip_close_circle = 2131165326;
+			public const int icon = 2131165326;
+			
+			// aapt resource value: 0x7F07008F
+			public const int iconorecicla = 2131165327;
+			
+			// aapt resource value: 0x7F070087
+			public const int ic_arrow_down_24dp = 2131165319;
+			
+			// aapt resource value: 0x7F070088
+			public const int ic_clock_black_24dp = 2131165320;
+			
+			// aapt resource value: 0x7F070089
+			public const int ic_keyboard_black_24dp = 2131165321;
+			
+			// aapt resource value: 0x7F07008A
+			public const int ic_mtrl_checked_circle = 2131165322;
+			
+			// aapt resource value: 0x7F07008B
+			public const int ic_mtrl_chip_checked_black = 2131165323;
+			
+			// aapt resource value: 0x7F07008C
+			public const int ic_mtrl_chip_checked_circle = 2131165324;
+			
+			// aapt resource value: 0x7F07008D
+			public const int ic_mtrl_chip_close_circle = 2131165325;
 			
 			// aapt resource value: 0x7F070090
 			public const int instagram = 2131165328;

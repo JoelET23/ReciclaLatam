@@ -281,9 +281,6 @@
     <AndroidAsset Include="Assets\CircleImg.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\FaviconApp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Nosotros.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -327,6 +324,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\ruta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\iconorecicla.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
