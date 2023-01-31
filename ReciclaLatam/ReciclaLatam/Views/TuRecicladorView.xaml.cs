@@ -14,7 +14,7 @@ namespace ReciclaLatam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TuRecicladorView : ContentPage
     {
-        public string latitud;
+        public double latitud;
         public string geolocalizacion;
         public string apellidos;
         public string direccion;
@@ -26,8 +26,8 @@ namespace ReciclaLatam.Views
         public string id_municipalidad;
         public string telefono;
         public string foto;
-        public string longitud;
-        public TuRecicladorView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon)
+        public double longitud;
+        public TuRecicladorView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
             latitud = l;

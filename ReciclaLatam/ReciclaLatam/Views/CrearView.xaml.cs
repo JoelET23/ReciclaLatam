@@ -51,7 +51,7 @@ namespace ReciclaLatam.Views
 
             var UserUp = new UsuarioUpdate
             {
-                latitud = null,
+                latitud = 0,
                 geolocalizacion = null,
                 apellidos = null,
                 direccion = null,
@@ -62,7 +62,8 @@ namespace ReciclaLatam.Views
                 password = PasInput,
                 id_municipalidad = null,
                 telefono = null,
-                foto = "EditFoto.png"
+                foto = "EditFoto.png",
+                longitud = 0
             };
             var stringPayload = JsonConvert.SerializeObject(UserUp);
 

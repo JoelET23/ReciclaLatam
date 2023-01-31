@@ -16,7 +16,7 @@ namespace ReciclaLatam.Views
     public partial class NoticiasView : ContentPage
     {
         #region Variables
-        public string latitud;
+        public double latitud;
         public string geolocalizacion;
         public string apellidos;
         public string direccion;
@@ -28,7 +28,7 @@ namespace ReciclaLatam.Views
         public string id_municipalidad;
         public string telefono;
         public string foto;
-        public string longitud;
+        public double longitud;
 
         public string TitNoticia;
         public string FecNoticia;
@@ -38,7 +38,7 @@ namespace ReciclaLatam.Views
 
         #endregion
 
-        public NoticiasView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon)
+        public NoticiasView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
             //BindingContext = new NoticiaVM();
@@ -102,7 +102,7 @@ namespace ReciclaLatam.Views
         }
         private void MenPun(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new PuntosMapaView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+            Application.Current.MainPage = new RutasView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
         private void MenMan(object sender, EventArgs e)
         {

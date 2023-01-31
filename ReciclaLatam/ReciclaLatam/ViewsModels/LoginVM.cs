@@ -65,7 +65,7 @@ namespace ReciclaLatam.ViewsModels
 
                     if (UserLog == _userName && PassLog == _password)
                     {
-                        string latitud = usuariosList.latitud;
+                        double latitud = usuariosList.latitud;
                         string geolocalizacion = usuariosList.geolocalizacion;
                         string apellidos = usuariosList.apellidos;
                         string direccion = usuariosList.direccion;
@@ -77,7 +77,7 @@ namespace ReciclaLatam.ViewsModels
                         string id_municipalidad = usuariosList.id_municipalidad;
                         string telefono = usuariosList.telefono;
                         string foto = usuariosList.foto;
-                        string longitud = usuariosList.longitud;
+                        double longitud = usuariosList.longitud;
 
                         Application.Current.MainPage = new InicioView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
                     }

@@ -15,7 +15,7 @@ namespace ReciclaLatam.ViewsModels
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NoticiasDetalleView : ContentPage
     {
-        public string latitud;
+        public double latitud;
         public string geolocalizacion;
         public string apellidos;
         public string direccion;
@@ -27,10 +27,10 @@ namespace ReciclaLatam.ViewsModels
         public string id_municipalidad;
         public string telefono;
         public string foto;
-        public string longitud;
+        public double longitud;
 
         //const int VarNoticia;
-        public NoticiasDetalleView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon, string titnot, string fecnot, string catnot, string imgnot, string connot)
+        public NoticiasDetalleView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon, string titnot, string fecnot, string catnot, string imgnot, string connot)
         {
             InitializeComponent();
             ContNot.Text = connot;

@@ -17,7 +17,7 @@ namespace ReciclaLatam.Views
     {
         #region Variables
 
-        public string latitudDm;
+        public double latitudDm;
         public string geolocalizacionDm;
         public string apellidosDm;
         public string direccionDm;
@@ -29,10 +29,10 @@ namespace ReciclaLatam.Views
         public string id_municipalidadDm;
         public string telefonoDm;
         public string fotoDm;
-        public string longitudDm;
+        public double longitudDm;
 
         #endregion
-        public CambiarPassView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon)
+        public CambiarPassView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
 

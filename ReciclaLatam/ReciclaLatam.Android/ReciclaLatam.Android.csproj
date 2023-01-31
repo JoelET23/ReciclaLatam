@@ -319,5 +319,14 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logonosotros.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\conductor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ruta.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -1,4 +1,7 @@
-﻿using ReciclaLatam.ViewsModels;
+﻿using Plugin.Geolocator;
+using ReciclaLatam.ApiRest;
+using ReciclaLatam.Models;
+using ReciclaLatam.ViewsModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +18,9 @@ namespace ReciclaLatam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RutasView : ContentPage
     {
-        PuntosMapaVM PuntosMapaVM_;
 
         #region Variables
-        public string latitud;
+        public double latitud;
         public string geolocalizacion;
         public string apellidos;
         public string direccion;
@@ -30,14 +32,14 @@ namespace ReciclaLatam.Views
         public string id_municipalidad;
         public string telefono;
         public string foto;
-        public string longitud;
+        public double longitud;
+        public double latitudMap;
+        public double longuitudMap;
         #endregion
 
-        public RutasView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon)
+        public RutasView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
-
-            BindingContext = PuntosMapaVM_ = new PuntosMapaVM();
 
             ApplyMapTheme();
 
@@ -75,28 +77,53 @@ namespace ReciclaLatam.Views
 
         }
 
-        void GetRutas()
+        async void GetRutas()
         {
-            var contents = PuntosMapaVM_.LoadVehicles();
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 1000;
 
-            if (contents != null)
+            var position = await locator.GetPositionAsync(TimeSpan.FromMilliseconds(1000));
+
+            if (position == null)
             {
-                foreach (var item in contents)
+                return;
+            }
+            latitudMap = position.Latitude;
+            longuitudMap = position.Longitude;
+
+
+            var positionsUser = new Position(latitudMap, longuitudMap);//Latitude, Longitude
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(positionsUser, Distance.FromMeters(500)));
+
+
+            ApiPuntos objApiPuntos = new ApiPuntos();
+            Task<PuntosLista> returnPuntosLista = objApiPuntos.WebApi();
+            PuntosLista objPuntosLista = await returnPuntosLista;
+
+            foreach (var item in objPuntosLista.Items)
+            {
+                Pin VehiclePinsUser = new Pin()
                 {
-                    Pin VehiclePins = new Pin()
-                    {
-                        Label = item.Reciclador,
-                        Type = PinType.Place,
-                        Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("PickupPin.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "PickupPin.png", WidthRequest = 60, HeightRequest = 60 }),
-                        Position = new Position(Convert.ToDouble(item.Latitude), Convert.ToDouble(item.Longitude)),
-                    };
-                    map.Pins.Add(VehiclePins);
-                }
+                    Label = "Punto de recojo",
+                    Type = PinType.Place,
+                    Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("ruta.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "ruta.png" }),
+                    Position = new Position(item.latitud, item.longitud),
+                };
+                map.Pins.Add(VehiclePinsUser);
             }
 
+            Pin VehiclePinsUserAct = new Pin()
+            {
+                Label = "Mi ubicación",
+                Type = PinType.Place,
+                Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("usuario.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "usuario.png" }),
+                Position = new Position(latitudMap, longuitudMap),
+            };
+            map.Pins.Add(VehiclePinsUserAct);
+
             //This is your location and it should be near to your car location.
-            var positions = new Position(-12.121854, -77.030698);//Latitude, Longitude
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(500)));
+            var positions = new Position(latitudMap, longuitudMap);//Latitude, Longitude
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(300)));
         }
 
         private void MenHom(object sender, EventArgs e)
@@ -109,7 +136,7 @@ namespace ReciclaLatam.Views
         }
         private void MenPun(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new PuntosMapaView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+            Application.Current.MainPage = new RutasView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
         private void MenMan(object sender, EventArgs e)
         {

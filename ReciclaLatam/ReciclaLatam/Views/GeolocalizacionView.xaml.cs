@@ -1,4 +1,6 @@
 ﻿using Plugin.Geolocator;
+using ReciclaLatam.ApiRest;
+using ReciclaLatam.Models;
 using ReciclaLatam.ViewsModels;
 using System;
 using System.Collections.Generic;
@@ -16,10 +18,8 @@ namespace ReciclaLatam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GeolocalizacionView : ContentPage
     {
-        PuntosMapaVM PuntosMapaVM_;
-
         #region Variables
-        public string latitud;
+        public double latitud;
         public string geolocalizacion;
         public string apellidos;
         public string direccion;
@@ -31,71 +31,19 @@ namespace ReciclaLatam.Views
         public string id_municipalidad;
         public string telefono;
         public string foto;
-        public string longitud;
+        public double longitud;
         #endregion
 
         public double latitudMap;
         public double longuitudMap;
+        public double latreal;
+        public double lonreal;
 
-        public GeolocalizacionView(string l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, string lon)
+        public int index = 0;
+
+        public GeolocalizacionView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
-
-            BindingContext = PuntosMapaVM_ = new PuntosMapaVM();
-
-            ApplyMapTheme();
-
-            Device.StartTimer(TimeSpan.FromSeconds(5), () =>
-            {
-                Task.Run(async () =>
-                {
-                    var locator = CrossGeolocator.Current;
-                    locator.DesiredAccuracy = 50;
-                    if (locator.IsGeolocationAvailable)
-                    {
-                        if (locator.IsGeolocationEnabled)
-                        {
-                            if (!locator.IsListening)
-                            {
-                                await locator.StartListeningAsync(TimeSpan.FromSeconds(1), 5);
-                            }
-                            locator.PositionChanged += (cambio, args) =>
-                            {
-                                var loc = args.Position;
-
-                                /*LonMp.Text = loc.Longitude.ToString();
-                                latitudMap = double.Parse(LonMp.Text);*/
-                                latitudMap = loc.Latitude;
-
-                                /*LatMp.Text = loc.Latitude.ToString();
-                                longuitudMap = double.Parse(LatMp.Text);*/
-                                longuitudMap = loc.Longitude;
-
-
-
-
-                                Pin VehiclePins = new Pin()
-                                {
-                                    Label = "Mi ubicación",
-                                    Type = PinType.Place,
-                                    Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("PickupPin.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "PickupPin.png", WidthRequest = 60, HeightRequest = 60 }),
-                                    Position = new Position(latitudMap, longuitudMap),
-                                };
-                                map.Pins.Add(VehiclePins);
-
-                                //This is your location and it should be near to your car location.
-                                var positions = new Position(latitudMap, longuitudMap);//Latitude, Longitude
-                                map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(500)));
-
-                            };
-                        }
-                    }
-                    //await DisplayAlert("Mesaje", "Prueba", "Ok");
-                    //var time = await GetRutas();
-                    // do something with time...
-                });
-                return true;
-            });
 
             #region Variables2
             latitud = l;
@@ -112,6 +60,8 @@ namespace ReciclaLatam.Views
             foto = fot;
             longitud = lon;
             #endregion
+
+            ApplyMapTheme();
         }
 
 
@@ -127,52 +77,34 @@ namespace ReciclaLatam.Views
                 map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(28.12267, 82.29483), Distance.FromMeters(1000)), false);
 
             }*/
-
-            //GetRutas();
-
+            GetGelocalization();
         }
 
-        private async void GetRutas()
+        private async void GetGelocalization()
         {
             var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 50;
-            if (locator.IsGeolocationAvailable)
+            locator.DesiredAccuracy = 1000;
+
+            var position = await locator.GetPositionAsync(TimeSpan.FromMilliseconds(1000));
+
+            if (position == null)
             {
-                if (locator.IsGeolocationEnabled)
-                {
-                    if (!locator.IsListening)
-                    {
-                        await locator.StartListeningAsync(TimeSpan.FromSeconds(1), 5);
-                    }
-                    locator.PositionChanged += (cambio, args) =>
-                    {
-                        var loc = args.Position;
-
-                        /*LonMp.Text = loc.Longitude.ToString();
-                        latitudMap = double.Parse(LonMp.Text);*/
-                        latitudMap = loc.Latitude;
-
-                        /*LatMp.Text = loc.Latitude.ToString();
-                        longuitudMap = double.Parse(LatMp.Text);*/
-                        longuitudMap = loc.Longitude;
-
-
-                        Pin VehiclePins = new Pin()
-                        {
-                            Label = "Mi ubicación",
-                            Type = PinType.Place,
-                            Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("PickupPin.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "PickupPin.png", WidthRequest = 60, HeightRequest = 60 }),
-                            Position = new Position(latitudMap, longuitudMap),
-                        };
-                        map.Pins.Add(VehiclePins);
-
-                        //This is your location and it should be near to your car location.
-                        var positions = new Position(latitudMap, longuitudMap);//Latitude, Longitude
-                        map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(500)));
-
-                    };
-                }
+                return;
             }
+            latitudMap = position.Latitude;
+            longuitudMap = position.Longitude;
+
+            Pin VehiclePins = new Pin()
+            {
+                Label = "Mi ubicación",
+                Type = PinType.Place,
+                Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("usuario.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "usuario.png" }),
+                Position = new Position(latitudMap, longuitudMap),
+            };
+            map.Pins.Add(VehiclePins);
+
+            var positionsUser = new Position(latitudMap, longuitudMap);//Latitude, Longitude
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(positionsUser, Distance.FromMeters(500)));
         }
 
         private void MenHom(object sender, EventArgs e)

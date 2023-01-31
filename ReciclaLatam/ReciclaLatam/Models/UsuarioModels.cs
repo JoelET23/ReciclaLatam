@@ -6,7 +6,7 @@ namespace ReciclaLatam.Models
 {
     public class UsuarioModels
     {
-        public string latitud { get; set; }
+        public double latitud { get; set; }
         public string geolocalizacion { get; set; }
         public string apellidos { get; set; }
         public string direccion { get; set; }
@@ -18,7 +18,7 @@ namespace ReciclaLatam.Models
         public string id_municipalidad { get; set; }
         public string telefono { get; set; }
         public string foto { get; set; }
-        public string longitud { get; set; }
+        public double longitud { get; set; }
     }
 
     public class UsuarioLista
@@ -30,7 +30,7 @@ namespace ReciclaLatam.Models
 
     public class UsuarioUpdate
     {
-        public string latitud { get; set; }
+        public double latitud { get; set; }
         public string geolocalizacion { get; set; }
         public string apellidos { get; set; }
         public string direccion { get; set; }
@@ -42,6 +42,6 @@ namespace ReciclaLatam.Models
         public string id_municipalidad { get; set; }
         public string telefono { get; set; }
         public string foto { get; set; }
-        public string longitud { get; set; }
+        public double longitud { get; set; }
     }
 }
