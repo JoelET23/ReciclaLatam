@@ -12,17 +12,6 @@ using System.Text;
 
 namespace ReciclaLatam.Droid
 {
-    /*[Activity(Label = "Splash")]
-    public class Splash : Activity
-    {
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-
-            // Create your application here
-        }
-    }*/
-
     [Activity(Label = "Recicla Latam", Icon = "@drawable/iconorecicla", Theme = "@style/SplashScreen", MainLauncher = true, NoHistory = true)]
     public class Splash : AppCompatActivity
     {
@@ -32,6 +21,4 @@ namespace ReciclaLatam.Droid
             StartActivity(typeof(MainActivity));
         }
     }
-
-
 }
