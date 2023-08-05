@@ -27,6 +27,7 @@ namespace ReciclaLatam.Views
         public string telefono;
         public string foto;
         public double longitud;
+        public string maparuta;
         public TuRecicladorView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
@@ -76,7 +77,7 @@ namespace ReciclaLatam.Views
         }
         private void MenPun(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new PuntosMapaView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+            Application.Current.MainPage = new PuntosMapaView(maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
         private void MenMan(object sender, EventArgs e)
         {

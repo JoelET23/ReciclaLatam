@@ -16,8 +16,12 @@
     <None Remove="Fonts\MontserratEB.ttf" />
     <None Remove="Fonts\MontserratL.ttf" />
     <None Remove="Fonts\MontserratR.ttf" />
+    <None Remove="MapResources\Jueves1500.json" />
+    <None Remove="MapResources\Jueves1530.json" />
+    <None Remove="MapResources\Jueves1600.json" />
+    <None Remove="MapResources\Jueves1700.json" />
+    <None Remove="MapResources\Jueves1730.json" />
     <None Remove="MapResources\MapTheme.json" />
-    <None Remove="MapResources\TrackPath.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,8 +29,12 @@
     <EmbeddedResource Include="Fonts\MontserratEB.ttf" />
     <EmbeddedResource Include="Fonts\MontserratL.ttf" />
     <EmbeddedResource Include="Fonts\MontserratR.ttf" />
+    <EmbeddedResource Include="MapResources\Jueves1730.json" />
+    <EmbeddedResource Include="MapResources\Jueves1700.json" />
+    <EmbeddedResource Include="MapResources\Jueves1600.json" />
+    <EmbeddedResource Include="MapResources\Jueves1500.json" />
     <EmbeddedResource Include="MapResources\MapTheme.json" />
-    <EmbeddedResource Include="MapResources\TrackPath.json" />
+    <EmbeddedResource Include="MapResources\Jueves1530.json" />
   </ItemGroup>
 
   <ItemGroup>

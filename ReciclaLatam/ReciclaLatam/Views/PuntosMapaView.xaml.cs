@@ -35,6 +35,10 @@ namespace ReciclaLatam.Views
         public string telefono;
         public string foto;
         public double longitud;
+        public string maparuta;
+
+        public double longmapfin;
+        public double latimapfin;
         #endregion
 
         public double latitudMap;
@@ -44,10 +48,10 @@ namespace ReciclaLatam.Views
 
         public int index = 0;
 
-        public PuntosMapaView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
+        public PuntosMapaView(string maprt, double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
-           
+
             //ApplyMapTheme();
 
             #region Variables2
@@ -64,7 +68,10 @@ namespace ReciclaLatam.Views
             telefono = tel;
             foto = fot;
             longitud = lon;
+            maparuta = maprt;
             #endregion
+
+            RutaVehiculo();
 
             var positions = new Position(latitud, longitud);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(500)));
@@ -114,7 +121,7 @@ namespace ReciclaLatam.Views
                                     {
                                         cPin.Position = new Xamarin.Forms.GoogleMaps.Position(latreal, lonreal);
                                         cPin.Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("conductor.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "conductor.png"});
-                                        map.MoveToRegion(MapSpan.FromCenterAndRadius(cPin.Position, Distance.FromMeters(500)));
+                                        //map.MoveToRegion(MapSpan.FromCenterAndRadius(cPin.Position, Distance.FromMeters(500)));
                                     }
                                 }
                                 index++;
@@ -124,10 +131,9 @@ namespace ReciclaLatam.Views
                                     Label = "Mi ubicación",
                                     Type = PinType.Place,
                                     Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("usuario.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "usuario.png"}),
-                                    Position = new Position(latitud, longitud),
+                                    Position = new Position(latimapfin, longmapfin),
                                 };
                                 map.Pins.Add(VehiclePinsUser);
-
                             };
                         }
                     }
@@ -150,6 +156,41 @@ namespace ReciclaLatam.Views
             }*/
             //StartRutaVehiculo();
 
+        }
+
+        void RutaVehiculo()
+        {
+            var assembly = typeof(PuntosMapaView).GetTypeInfo().Assembly;
+            var nombmapa = maparuta;
+            var maparecorridon = $"ReciclaLatam.MapResources." + nombmapa;
+
+            var stream = assembly.GetManifestResourceStream(maparecorridon);
+            string trackPathFile;
+
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                trackPathFile = reader.ReadToEnd();
+            }
+
+            var myJson = JsonConvert.DeserializeObject<List<Xamarin.Forms.GoogleMaps.Position>>(trackPathFile);
+
+            map.Polylines.Clear();
+
+            var polyline = new Xamarin.Forms.GoogleMaps.Polyline();
+            polyline.StrokeColor = Color.Black;
+            polyline.StrokeWidth = 5;
+
+            foreach (var p in myJson)
+            {
+                polyline.Positions.Add(p);
+
+            }
+            map.Polylines.Add(polyline);
+
+            latimapfin = polyline.Positions.LastOrDefault().Latitude;
+            longmapfin  = polyline.Positions.LastOrDefault().Longitude;
+
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Xamarin.Forms.GoogleMaps.Position(polyline.Positions[0].Latitude, polyline.Positions[0].Longitude), Xamarin.Forms.GoogleMaps.Distance.FromMiles(0.50f)));
         }
 
         private void MenHom(object sender, EventArgs e)

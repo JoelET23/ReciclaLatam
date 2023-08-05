@@ -3,6 +3,7 @@ using ReciclaLatam.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,6 +28,8 @@ namespace ReciclaLatam.Views
         public string telefono;
         public string foto;
         public double longitud;
+
+        public string maparuta;
 
         public RecojoView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
@@ -91,7 +94,12 @@ namespace ReciclaLatam.Views
 
         private void RutaTap(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new PuntosMapaView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+            var frame = sender as Frame;
+            var model = frame.BindingContext as RecojosModels;
+
+            maparuta = model.hora_fin;
+
+            Application.Current.MainPage = new PuntosMapaView(maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
     }
 }
