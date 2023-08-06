@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -31,6 +32,8 @@ namespace ReciclaLatam.Views
 
         public string maparuta;
 
+        DateTime fechaActual = DateTime.Now;
+
         public RecojoView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
@@ -52,11 +55,14 @@ namespace ReciclaLatam.Views
 
         private async void getRecojos()
         {
+            //string dia1 = fechaActual.ToString("dddd");
+
             ApiRecojos objApiRecojos = new ApiRecojos();
             Task<RecojosLista> returnRecojosLista = objApiRecojos.WebApi();
             RecojosLista objRecojosLista = await returnRecojosLista;
 
-            RecojosPage.ItemsSource = objRecojosLista.Items;
+            //RecojosPage.ItemsSource = objRecojosLista.Items.OrderByDescending(x => x.recoleccion_id);
+            RecojosPage.ItemsSource = objRecojosLista.Items.OrderBy(x => x.recoleccion_id).ToList();
 
         }
 
