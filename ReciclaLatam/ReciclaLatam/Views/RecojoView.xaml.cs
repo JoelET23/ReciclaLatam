@@ -10,6 +10,8 @@ using System.Globalization;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.ObjectModel;
+using static Xamarin.Essentials.Permissions;
 
 namespace ReciclaLatam.Views
 {
@@ -32,12 +34,11 @@ namespace ReciclaLatam.Views
 
         public string maparuta;
 
-        DateTime fechaActual = DateTime.Now;
 
         public RecojoView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
-            getRecojos();
+            
             latitud = l;
             geolocalizacion = g;
             apellidos = ap;
@@ -51,21 +52,39 @@ namespace ReciclaLatam.Views
             telefono = tel;
             foto = fot;
             longitud = lon;
+
+            getRecojos();
+
+
         }
 
         private async void getRecojos()
         {
-            //string dia1 = fechaActual.ToString("dddd");
+            //int IdZonQu = Int32.Parse(geolocalizacion);
+            int IdZonQu = Convert.ToInt32(geolocalizacion);
+            //int IdZonQu = int.Parse(geolocalizacion);
+            
+
 
             ApiRecojos objApiRecojos = new ApiRecojos();
             Task<RecojosLista> returnRecojosLista = objApiRecojos.WebApi();
             RecojosLista objRecojosLista = await returnRecojosLista;
 
             //RecojosPage.ItemsSource = objRecojosLista.Items.OrderByDescending(x => x.recoleccion_id);
-            RecojosPage.ItemsSource = objRecojosLista.Items.OrderBy(x => x.recoleccion_id).ToList();
+            //RecojosPage.ItemsSource = objRecojosLista.Items.OrderBy(x => x.recoleccion_id).ToList();
 
+            var forlustrut = objRecojosLista.Items.OrderBy(x => x.recoleccion_id).ToList();
+
+            var ListRutCl = new ObservableCollection<RecojosModels>();
+            foreach (var item in forlustrut)
+            {
+                if (item.id_municipalidad == IdZonQu)
+                {
+                    ListRutCl.Add(item);
+                }
+            }
+            RecojosPage.ItemsSource = ListRutCl;
         }
-
 
 
         private void ConfiguracionTap(object sender, EventArgs e)

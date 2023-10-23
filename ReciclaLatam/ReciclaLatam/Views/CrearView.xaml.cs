@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Plugin.Geolocator;
 using ReciclaLatam.ApiRest;
 using ReciclaLatam.Models;
 using System;
@@ -16,6 +17,8 @@ namespace ReciclaLatam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CrearView : ContentPage
     {
+        public double latitudMap;
+        public double longuitudMap;
         public CrearView()
         {
             InitializeComponent();
@@ -33,6 +36,18 @@ namespace ReciclaLatam.Views
 
         private async void SaveLog(object sender, EventArgs e)
         {
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 1000;
+
+            var position = await locator.GetPositionAsync(TimeSpan.FromMilliseconds(1000));
+
+            if (position == null)
+            {
+                return;
+            }
+            latitudMap = position.Latitude;
+            longuitudMap = position.Longitude;
+
             ApiUsuario objApiUsuario = new ApiUsuario();
             Task<UsuarioLista> returnUsuarioLista = objApiUsuario.WebApi();
             UsuarioLista objUsuarioLista = await returnUsuarioLista;
@@ -51,7 +66,7 @@ namespace ReciclaLatam.Views
 
             var UserUp = new UsuarioUpdate
             {
-                latitud = 0,
+                latitud = latitudMap,
                 geolocalizacion = null,
                 apellidos = null,
                 direccion = null,
@@ -63,7 +78,7 @@ namespace ReciclaLatam.Views
                 id_municipalidad = null,
                 telefono = null,
                 foto = "EditFoto.png",
-                longitud = 0
+                longitud = longuitudMap
             };
             var stringPayload = JsonConvert.SerializeObject(UserUp);
 

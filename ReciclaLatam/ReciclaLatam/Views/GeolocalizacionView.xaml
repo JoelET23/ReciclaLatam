@@ -4,62 +4,64 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              x:Class="ReciclaLatam.Views.GeolocalizacionView">
     <Grid>
-        <maps:Map x:Name="map"/>
-        <!--<StackLayout Orientation="Vertical">
-            <Label x:Name="LatMp" />
-            <Label x:Name="LonMp" />
-        </StackLayout>-->
-        
-        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
-            <Grid VerticalOptions="EndAndExpand" BackgroundColor="#ffffff">
-                <StackLayout Orientation="Horizontal">
-                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="MenHom"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
-                            <Image WidthRequest="50" HeightRequest="30"  Source="MenHome.png"/>
-                            <Label Text="Home" Style="{StaticResource DesMenu}"/>
-                        </StackLayout>
+        <maps:Map x:Name="map" PinDragStart="map_PinDragStart" PinDragEnd="map_PinDragEnd" HasZoomEnabled="True"></maps:Map>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" BackgroundColor="#FFFFFF" Padding="20,40,20,30">
+            <Label Style="{StaticResource TituloHmA}">Selecciona tu zona</Label>
+            <StackLayout Orientation="Horizontal" Padding="0,10,0,0" x:Name="btnsonzn">
+                <ScrollView Orientation="Horizontal">
+                    <CollectionView HeightRequest="60" WidthRequest="650" SelectionMode="Single" x:Name="RecojosPage">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="15"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="0" x:Name="stkzona">
+                                    <Button x:Name="{Binding zona_id}" Clicked="TabZonaSel" WidthRequest="30" HeightRequest="30" FontFamily="MontserratR" TextColor="#FFFFFF" BorderColor="#3B5165" FontSize="10" CornerRadius="50" BackgroundColor="{Binding campoT}" />
+                                    <Label FontSize="9" HorizontalTextAlignment="Center" Style="{StaticResource TituloFechaRec}" Text="{Binding NomZon}"></Label>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+            </StackLayout>
+
+            <StackLayout IsVisible="False" x:Name="StackBlk" Margin="0,20,0,0">
+                
+                <StackLayout Orientation="Horizontal" >
+                    <Frame HasShadow="False" WidthRequest="250" Padding="0">
+                        <Label Style="{StaticResource TituloHmA}">Selecciona tu ruta</Label>
                     </Frame>
-                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="MenReco"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
-                            <Image WidthRequest="50" HeightRequest="25"  Source="Menrecojo.png"/>
-                            <Label Text="Recojos" Style="{StaticResource DesMenu}"/>
-                        </StackLayout>
-                    </Frame>
-                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="MenPun"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
-                            <Image WidthRequest="50" HeightRequest="25"  Source="MenPunto.png"/>
-                            <Label Text="Puntos" Style="{StaticResource DesMenu}"/>
-                        </StackLayout>
-                    </Frame>
-                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="MenMan"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
-                            <Image WidthRequest="50" HeightRequest="25"  Source="MenManual.png"/>
-                            <Label Text="Manuales" Style="{StaticResource DesMenu}"/>
-                        </StackLayout>
-                    </Frame>
-                    <Frame Padding="0" HasShadow="False" HeightRequest="70" WidthRequest="100">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="MenNot"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
-                            <Image WidthRequest="50" HeightRequest="30"  Source="MenNoticia.png"/>
-                            <Label Text="Noticias" Style="{StaticResource DesMenu}"/>
+                    <Frame HasShadow="False" WidthRequest="250" Padding="0" HorizontalOptions="End">
+                        <StackLayout Orientation="Horizontal">
+                            <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
+                            <Label x:Name="FechaZonaRt" Style="{StaticResource TituloFechaRec}">Fecha</Label>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
-            </Grid>
+
+                <StackLayout Orientation="Horizontal" Padding="0,10,0,0">
+                    <ScrollView Orientation="Horizontal">
+                        <CollectionView WidthRequest="1800" HeightRequest="65" SelectionMode="Single" x:Name="RutasPage">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Clicked="TabRutaSel" x:Name="btnclkrt" FontSize="12" FontFamily="MontserratR" ImageSource="RecojoHora.png" Text="{Binding hora_inicio}" BackgroundColor="#E5F2F7" CornerRadius="100" />
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </ScrollView>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" Padding="0,20,0,0">
+                    <Button Text="Guadar ubicación" Clicked="SaveUbicacion" FontFamily="MontserratB" TextColor="#FFFFFF" BackgroundColor="#BAC761" TextTransform="None" CornerRadius="50" Padding="20, 0" Margin="0,0,10,0"/>
+                    <Button Text="Salir" Clicked="CancelUbic" FontFamily="MontserratB" TextColor="#3B5165" BorderColor="#3B5165" BorderWidth="2" TextTransform="None" CornerRadius="50" Padding="20,0" BackgroundColor="#FFFFFF" />
+                </StackLayout>
+
+            </StackLayout>
+                
         </StackLayout>
     </Grid>
 </ContentPage>

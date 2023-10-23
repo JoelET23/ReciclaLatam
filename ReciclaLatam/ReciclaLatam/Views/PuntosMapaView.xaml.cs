@@ -125,15 +125,6 @@ namespace ReciclaLatam.Views
                                     }
                                 }
                                 index++;
-
-                                Pin VehiclePinsUser = new Pin()
-                                {
-                                    Label = "Mi ubicación",
-                                    Type = PinType.Place,
-                                    Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("usuario.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "usuario.png"}),
-                                    Position = new Position(latimapfin, longmapfin),
-                                };
-                                map.Pins.Add(VehiclePinsUser);
                             };
                         }
                     }
@@ -155,7 +146,6 @@ namespace ReciclaLatam.Views
 
             }*/
             //StartRutaVehiculo();
-
         }
 
         void RutaVehiculo()
@@ -190,7 +180,32 @@ namespace ReciclaLatam.Views
             latimapfin = polyline.Positions.LastOrDefault().Latitude;
             longmapfin  = polyline.Positions.LastOrDefault().Longitude;
 
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Xamarin.Forms.GoogleMaps.Position(polyline.Positions[0].Latitude, polyline.Positions[0].Longitude), Xamarin.Forms.GoogleMaps.Distance.FromMiles(0.50f)));
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Xamarin.Forms.GoogleMaps.Position(polyline.Positions[0].Latitude, polyline.Positions[0].Longitude), Xamarin.Forms.GoogleMaps.Distance.FromMiles(0.30f)));
+
+            var pin = new Xamarin.Forms.GoogleMaps.Pin
+            {
+                Type = PinType.SearchResult,
+                Position = new Xamarin.Forms.GoogleMaps.Position(polyline.Positions.First().Latitude, polyline.Positions.First().Longitude),
+                Label = "Inicio",
+                Address = "Inicio",
+                Tag = "Inicio",
+                Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("usuario.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "usuario.png", WidthRequest = 25, HeightRequest = 25 })
+
+            };
+            map.Pins.Add(pin);
+
+            var Endpin = new Xamarin.Forms.GoogleMaps.Pin
+            {
+                Type = PinType.SearchResult,
+                Position = new Xamarin.Forms.GoogleMaps.Position(polyline.Positions.Last().Latitude, polyline.Positions.Last().Longitude),
+                Label = "Fin",
+                Address = "Fin",
+                Tag = "Fin",
+                Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("conductor.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "conductor.png", WidthRequest = 25, HeightRequest = 25 })
+
+            };
+            map.Pins.Add(Endpin);
+
         }
 
         private void MenHom(object sender, EventArgs e)

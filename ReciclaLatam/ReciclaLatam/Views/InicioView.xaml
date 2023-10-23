@@ -112,13 +112,13 @@
                                 <Frame WidthRequest="340" HasShadow="False" Padding="0">
                                     <StackLayout Orientation="Horizontal"  VerticalOptions="Center">
                                         <Image WidthRequest="25" HeightRequest="25" Source="RecojoCalen.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">26 ago 2022</Label>
+                                        <Label x:Name="diarec" Style="{StaticResource TituloFechaRec}"/>
                                     </StackLayout>
                                 </Frame>
                                 <Frame WidthRequest="340" HasShadow="False" Padding="0">
                                     <StackLayout Orientation="Horizontal">
                                         <Image WidthRequest="25" HeightRequest="25" Source="RecojoHora.png"/>
-                                        <Label Style="{StaticResource TituloFechaRec}">4:00 pm</Label>
+                                        <Label x:Name="horarec" Style="{StaticResource TituloFechaRec}"/>
                                     </StackLayout>
                                 </Frame>
                                 <Frame WidthRequest="100" HasShadow="False" Padding="0">

@@ -93,7 +93,7 @@ namespace ReciclaLatam.Views
 
 
             var positionsUser = new Position(latitudMap, longuitudMap);//Latitude, Longitude
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(positionsUser, Distance.FromMeters(500)));
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(positionsUser, Distance.FromMeters(800)));
 
 
             ApiPuntos objApiPuntos = new ApiPuntos();
@@ -122,8 +122,8 @@ namespace ReciclaLatam.Views
             map.Pins.Add(VehiclePinsUserAct);
 
             //This is your location and it should be near to your car location.
-            var positions = new Position(latitudMap, longuitudMap);//Latitude, Longitude
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(300)));
+            var positions = new Position(-12.12348, -77.03543);//Latitude, Longitude
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(800)));
         }
 
         private void MenHom(object sender, EventArgs e)

@@ -47,7 +47,7 @@
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGeo"/>
                                 </Frame.GestureRecognizers>
-                                <Label Style="{StaticResource TituloConfig}">Habilitar geolocalización</Label>
+                                <Label Style="{StaticResource TituloConfig}">Actualizar zona de recojo</Label>
                             </Frame>
                             <Frame WidthRequest="30" HasShadow="False" Padding="0">
                                 <Image Source="RecojoArrow.png"/>

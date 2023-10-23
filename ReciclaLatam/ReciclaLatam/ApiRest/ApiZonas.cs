@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace ReciclaLatam.ApiRest
 {
-    public class ApiPuntos
+    public class ApiZonas
     {
-        private const string url = "https://4e6px23w4i.execute-api.us-east-1.amazonaws.com/items";
+        private const string url = "https://nl7987o5m1.execute-api.us-east-1.amazonaws.com/items";
         private HttpClient _Client = new HttpClient();
-        public async Task<PuntosLista> WebApi()
+        public async Task<ZonasLista> WebApi()
         {
             var content = await _Client.GetStringAsync(url);
-            var post_ = JsonConvert.DeserializeObject<PuntosLista>(content);
+            var post_ = JsonConvert.DeserializeObject<ZonasLista>(content);
 
             return post_;
 

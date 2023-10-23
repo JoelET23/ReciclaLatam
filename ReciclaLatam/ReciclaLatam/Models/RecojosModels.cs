@@ -8,9 +8,11 @@ namespace ReciclaLatam.Models
     {
         public int id_municipalidad { get; set; }
         public int recoleccion_id { get; set; }
+        public int id_reciclador { get; set; }
         public string hora_inicio { get; set; }
         public string hora_fin { get; set; }
         public string fecha { get; set; }
+        public int id_usuario { get; set; }
     }
 
     public class RecojosLista
