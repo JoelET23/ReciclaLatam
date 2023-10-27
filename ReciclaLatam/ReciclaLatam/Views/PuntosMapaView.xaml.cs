@@ -206,6 +206,19 @@ namespace ReciclaLatam.Views
             };
             map.Pins.Add(Endpin);
 
+            Pin VehiclePins = new Pin()
+            {
+                Label = "Mi ubicación",
+                Type = PinType.Place,
+                Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("pinubicacion.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "pinubicacion.png" }),
+                Position = new Position(latitud, longitud),
+                IsDraggable = true
+            };
+            map.Pins.Add(VehiclePins);
+
+            var positionsUser = new Position(latitud, longitud);//Latitude, Longitude
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(positionsUser, Distance.FromMeters(1200)));
+
         }
 
         private void MenHom(object sender, EventArgs e)

@@ -48,7 +48,7 @@
                             </CollectionView.ItemsLayout>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Button Clicked="TabRutaSel" x:Name="btnclkrt" FontSize="12" FontFamily="MontserratR" ImageSource="RecojoHora.png" Text="{Binding hora_inicio}" BackgroundColor="#E5F2F7" CornerRadius="100" />
+                                    <Button Clicked="TabRutaSel" x:Name="btnclkrt" TextColor="#25333F" FontSize="12" FontFamily="MontserratR" ImageSource="RecojoHora.png" Text="{Binding hora_inicio}" BackgroundColor="#E5F2F7" CornerRadius="100" />
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>

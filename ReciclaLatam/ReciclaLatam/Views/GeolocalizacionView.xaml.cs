@@ -131,6 +131,7 @@ namespace ReciclaLatam.Views
             }
 
             map.Polylines.Clear();
+            
 
             var frame = sender as Button;
             var model = frame.BindingContext as ZonasModels;
@@ -145,6 +146,15 @@ namespace ReciclaLatam.Views
             StackBlk.IsVisible = true;
 
             idrutazon = model.numzona;
+
+            foreach (var item in map.Polygons)
+            {
+                item.StrokeWidth = 2f;
+            }
+
+            Polygon sleczon = map.Polygons.Where(x => Convert.ToInt32(x.Tag) == model.numzona).FirstOrDefault();
+            sleczon.StrokeWidth = 6f;
+
 
             ApiRecojos objApiRecojos = new ApiRecojos();
             Task<RecojosLista> returnRecojosLista = objApiRecojos.WebApi();
@@ -275,6 +285,7 @@ namespace ReciclaLatam.Views
         {
             var polygon = (Polygon)sender;
             string tag = polygon.Tag.ToString();
+            
 
             //RecojosPage.FindByName(tag);
 

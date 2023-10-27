@@ -5,12 +5,14 @@ using ReciclaLatam.ViewsModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
+using Xamarin.Forms.Shapes;
 using Xamarin.Forms.Xaml;
 
 namespace ReciclaLatam.Views
@@ -91,10 +93,10 @@ namespace ReciclaLatam.Views
             latitudMap = position.Latitude;
             longuitudMap = position.Longitude;
 
-
-            var positionsUser = new Position(latitudMap, longuitudMap);//Latitude, Longitude
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(positionsUser, Distance.FromMeters(800)));
-
+            var positions = new Position(-12.12348, -77.03543);//Latitude, Longitude
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(800)));
+            //var positionsUser = new Position(latitudMap, longuitudMap);//Latitude, Longitude
+            //map.MoveToRegion(MapSpan.FromCenterAndRadius(positionsUser, Distance.FromMeters(800)));
 
             ApiPuntos objApiPuntos = new ApiPuntos();
             Task<PuntosLista> returnPuntosLista = objApiPuntos.WebApi();
@@ -104,14 +106,24 @@ namespace ReciclaLatam.Views
             {
                 Pin VehiclePinsUser = new Pin()
                 {
-                    Label = "Punto de recojo",
+                    Label = item.Leyenda,
                     Type = PinType.Place,
+                    Address = item.CampoO,
                     Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("ruta.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "ruta.png" }),
-                    Position = new Position(item.latitud, item.longitud),
+                    Position = new Position(item.Latitud, item.Longitud),
+                    Tag = "Esta es la descripcion de modal"
                 };
                 map.Pins.Add(VehiclePinsUser);
-            }
+                //map.MapClicked += VehiclePinsUser_Clicked;
+                //map.SelectedPinChanged += VehiclePinsUser_Clicked;
+                
+                //map.PinClicked += Map_PinClicked;
 
+                //VehiclePinsUser.Clicked += VehiclePinsUser_Clicked;
+
+                //map.SelectedPin = VehiclePinsUser;
+                // map.SelectedPin += SelectedPin_Changed;
+            }
             Pin VehiclePinsUserAct = new Pin()
             {
                 Label = "Mi ubicación",
@@ -119,12 +131,27 @@ namespace ReciclaLatam.Views
                 Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("usuario.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "usuario.png" }),
                 Position = new Position(latitudMap, longuitudMap),
             };
-            map.Pins.Add(VehiclePinsUserAct);
-
-            //This is your location and it should be near to your car location.
-            var positions = new Position(-12.12348, -77.03543);//Latitude, Longitude
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(800)));
+            map.Pins.Add(VehiclePinsUserAct); 
         }
+
+        private void Map_PinClicked(object sender, PinClickedEventArgs e)
+        {
+            //var polygon = (Pin)sender;
+            //string tag = polygon.Tag.ToString();
+            //DisplayAlert("Hola", tag, "Close");
+
+            //var p = (Pin)sender;
+            var p = e.Pin;
+            
+            
+            var map = (Xamarin.Forms.GoogleMaps.Map)sender as Xamarin.Forms.GoogleMaps.Map;
+
+            var textomd = map.Pins.Count;
+
+            //Models.TPLocation loc = p.Tag as Models.Location;
+            //DisplayAlert("Hola", textomd.ToString(), "Close");
+        }
+
 
         private void MenHom(object sender, EventArgs e)
         {

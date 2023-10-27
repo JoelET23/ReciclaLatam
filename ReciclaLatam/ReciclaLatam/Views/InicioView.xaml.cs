@@ -72,11 +72,11 @@ namespace ReciclaLatam.Views
 
         private async void getRecojos()
         {
-            //int dia1 = (int)fechaActual.DayOfWeek;
-            //string horax = horaactual.ToString("HH:mm");
+            int dia1 = (int)fechaActual.DayOfWeek;
+            string horax = horaactual.ToString("HH:mm");
 
-            int dia1 = 4;
-            string horax = "10:50";
+            //int dia1 = 4;
+            //string horax = "10:50";
 
             DateTime hora2 = DateTime.ParseExact(horax, "HH:mm",
                 CultureInfo.InvariantCulture);
