@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+             xmlns:pages="http://rotorgames.com"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReciclaLatam.Popup.PopupMapa"
+             BackgroundClicked="Popupbgclick"
+             CloseWhenBackgroundIsClicked="False">
+    <StackLayout WidthRequest="400" Padding="20" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#FFFFFF">
+        <Label x:Name="lbldesmap" Style="{StaticResource DescripApp}" Margin="0,0,0,20"/>
+        <Button Text="Cerrar" Clicked="btnclosemodal" TextColor="#FFFFFF" WidthRequest="200" HeightRequest="40" FontFamily="MontserratB" CornerRadius="50" FontSize="16" BackgroundColor="#3B5165"/>
+    </StackLayout>
+</pages:PopupPage>

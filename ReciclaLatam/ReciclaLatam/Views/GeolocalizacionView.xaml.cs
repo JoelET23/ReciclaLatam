@@ -419,6 +419,7 @@ namespace ReciclaLatam.Views
 
             var polyline = new Xamarin.Forms.GoogleMaps.Polyline();
             polyline.StrokeColor = Color.FromHex("#494949");
+            
             polyline.StrokeWidth = 2;
 
             foreach (var p in myJson)

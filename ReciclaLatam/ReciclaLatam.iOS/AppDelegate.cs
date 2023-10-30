@@ -28,6 +28,8 @@ namespace ReciclaLatam.iOS
             Xamarin.FormsGoogleMaps.Init(AppConstants.GoogleMapsApiKey);
             LoadApplication(new App());
 
+            Rg.Plugins.Popup.Popup.Init();
+
             return base.FinishedLaunching(app, options);
         }
     }

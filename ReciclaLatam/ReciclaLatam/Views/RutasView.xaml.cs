@@ -2,6 +2,7 @@
 using ReciclaLatam.ApiRest;
 using ReciclaLatam.Models;
 using ReciclaLatam.ViewsModels;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -111,19 +112,12 @@ namespace ReciclaLatam.Views
                     Address = item.CampoO,
                     Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("ruta.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "ruta.png" }),
                     Position = new Position(item.Latitud, item.Longitud),
-                    Tag = "Esta es la descripcion de modal"
+                    Tag = item.CampoO
                 };
                 map.Pins.Add(VehiclePinsUser);
-                //map.MapClicked += VehiclePinsUser_Clicked;
-                //map.SelectedPinChanged += VehiclePinsUser_Clicked;
-                
-                //map.PinClicked += Map_PinClicked;
-
-                //VehiclePinsUser.Clicked += VehiclePinsUser_Clicked;
-
-                //map.SelectedPin = VehiclePinsUser;
-                // map.SelectedPin += SelectedPin_Changed;
             }
+            map.PinClicked += Map_PinClicked;
+
             Pin VehiclePinsUserAct = new Pin()
             {
                 Label = "Mi ubicación",
@@ -134,22 +128,15 @@ namespace ReciclaLatam.Views
             map.Pins.Add(VehiclePinsUserAct); 
         }
 
+   
+
         private void Map_PinClicked(object sender, PinClickedEventArgs e)
         {
-            //var polygon = (Pin)sender;
-            //string tag = polygon.Tag.ToString();
-            //DisplayAlert("Hola", tag, "Close");
-
-            //var p = (Pin)sender;
             var p = e.Pin;
-            
-            
-            var map = (Xamarin.Forms.GoogleMaps.Map)sender as Xamarin.Forms.GoogleMaps.Map;
+            string tag = p.Tag.ToString();
 
-            var textomd = map.Pins.Count;
+            Navigation.PushPopupAsync(new Popup.PopupMapa(tag));
 
-            //Models.TPLocation loc = p.Tag as Models.Location;
-            //DisplayAlert("Hola", textomd.ToString(), "Close");
         }
 
 
