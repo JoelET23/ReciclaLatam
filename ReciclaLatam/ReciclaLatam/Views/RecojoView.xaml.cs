@@ -33,6 +33,7 @@ namespace ReciclaLatam.Views
         public double longitud;
 
         public string maparuta;
+        public int zonaRuta;
 
 
         public RecojoView(double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
@@ -123,8 +124,9 @@ namespace ReciclaLatam.Views
             var model = frame.BindingContext as RecojosModels;
 
             maparuta = model.hora_fin;
+            zonaRuta = model.id_municipalidad;
 
-            Application.Current.MainPage = new PuntosMapaView(maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+            Application.Current.MainPage = new PuntosMapaView(zonaRuta, maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
     }
 }

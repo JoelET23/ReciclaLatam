@@ -52,7 +52,7 @@
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="PalmosaTbView"/>
                         </Frame.GestureRecognizers>
-                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Palmosa</Label>
+                        <Label Style="{StaticResource TituloTab}" TextColor="#3B5165">Pamolsa</Label>
                     </Frame>
                 </StackLayout>
                 </ScrollView>

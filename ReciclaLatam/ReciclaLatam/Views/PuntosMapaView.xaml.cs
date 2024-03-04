@@ -5,6 +5,7 @@ using ReciclaLatam.Models;
 using ReciclaLatam.ViewsModels;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -36,6 +37,7 @@ namespace ReciclaLatam.Views
         public string foto;
         public double longitud;
         public string maparuta;
+        public int zonaRuta;
 
         public double longmapfin;
         public double latimapfin;
@@ -48,7 +50,7 @@ namespace ReciclaLatam.Views
 
         public int index = 0;
 
-        public PuntosMapaView(string maprt, double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
+        public PuntosMapaView(int znrt, string maprt, double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
 
@@ -69,9 +71,11 @@ namespace ReciclaLatam.Views
             foto = fot;
             longitud = lon;
             maparuta = maprt;
+            zonaRuta = znrt;
             #endregion
 
             RutaVehiculo();
+            getRecojosMapas();
 
             var positions = new Position(latitud, longitud);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(500)));
@@ -218,6 +222,44 @@ namespace ReciclaLatam.Views
 
             var positionsUser = new Position(latitud, longitud);//Latitude, Longitude
             map.MoveToRegion(MapSpan.FromCenterAndRadius(positionsUser, Distance.FromMeters(1200)));
+
+        }
+
+        private async void getRecojosMapas()
+        {
+            ApiZonas objApiZonas = new ApiZonas();
+            Task<ZonasLista> returnZonasLista = objApiZonas.WebApi();
+            ZonasLista objZonasLista = await returnZonasLista;
+
+            
+
+            foreach (var zonalist in objZonasLista.Items)
+            {
+                if (zonalist.numzona == zonaRuta)
+                {
+                    var latlong = zonalist.latlong.Split('/');
+
+                    var polygon1 = new Polygon();
+
+                    foreach (var item in latlong)
+                    {
+                        var Mlatlong = item.Split(',');
+
+                        polygon1.Positions.Add(new Position(double.Parse(Mlatlong[0], CultureInfo.InvariantCulture), double.Parse(Mlatlong[1], CultureInfo.InvariantCulture)));
+
+                    }
+                    polygon1.IsClickable = true;
+                    polygon1.Tag = zonalist.numzona;
+                    polygon1.StrokeWidth = 2f;
+                    polygon1.StrokeColor = Color.FromHex("#" + zonalist.campoO);
+                    polygon1.FillColor = Color.FromHex("#4D" + zonalist.campoO);
+                    map.Polygons.Add(polygon1);
+                }
+            }
+
+            // Fit to all shapes
+            var bounds = Xamarin.Forms.GoogleMaps.Bounds.FromPositions(map.Polygons.SelectMany(poly => poly.Positions));
+            map.InitialCameraUpdate = CameraUpdateFactory.NewBounds(bounds, 5);
 
         }
 

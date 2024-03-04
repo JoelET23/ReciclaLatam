@@ -32,8 +32,7 @@ namespace ReciclaLatam.Views
         public string foto;
         public string maparuta;
         public double longitud;
-
-
+        public int zonaRuta;
         #endregion
 
         RecojosModels recojosModelsEnt;
@@ -213,7 +212,7 @@ namespace ReciclaLatam.Views
            
             maparuta = recojosModelsEnt.hora_fin;
 
-            Application.Current.MainPage = new PuntosMapaView(maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+            Application.Current.MainPage = new PuntosMapaView(zonaRuta, maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
         private void LinkFace(object sender, EventArgs e)
         {
