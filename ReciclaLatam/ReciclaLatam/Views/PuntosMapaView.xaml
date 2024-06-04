@@ -5,6 +5,19 @@
              x:Class="ReciclaLatam.Views.PuntosMapaView">
     <Grid>
         <maps:Map x:Name="map"/>
+        <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" Margin="20,20,20,0">
+            <Frame CornerRadius="16" BackgroundColor="#FFFFFF" Padding="10,15,15,15" HasShadow="True" x:Name="FrameThn">
+                <StackLayout Orientation="Horizontal">
+                    <Image WidthRequest="20" Margin="0,0,10,0" Source="alert.png"/>
+                    <Label Style="{StaticResource DesMenu}">Aunque el camión se desplace fuera del área pintada, la recolección se limita a esa zona</Label>
+                    <Image  WidthRequest="20" Source="close.png" Margin="0,-35,-10,0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="CloseFrm"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
         <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
             <Grid VerticalOptions="EndAndExpand" BackgroundColor="#ffffff">
                 <StackLayout Orientation="Horizontal">

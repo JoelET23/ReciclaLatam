@@ -49,7 +49,21 @@
                 <Setter Property="TextColor" Value="#6E7C89"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
-            
+
+            <Style TargetType="Label" x:Key="TitulosModO">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="MontserratB"/>
+                <Setter Property="TextColor" Value="#25333F"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="DescripModO">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="MontserratR"/>
+                <Setter Property="TextColor" Value="#6E7C89"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
             <Style TargetType="Label" x:Key="DesMenu">
                 <Setter Property="FontSize" Value="12"/>
                 <Setter Property="FontFamily" Value="MontserratR"/>
@@ -115,6 +129,22 @@
                 <Setter Property="TextColor" Value="#25333F"/>
                 <Setter Property="HorizontalOptions" Value="Start"/>
             </Style>
+
+            <Style TargetType="Label" x:Key="TitulosModFl">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="MontserratB"/>
+                <Setter Property="TextColor" Value="#25333F"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="DescripModFl">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="MontserratR"/>
+                <Setter Property="TextColor" Value="#6E7C89"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+
 
         </ResourceDictionary>
     </Application.Resources>

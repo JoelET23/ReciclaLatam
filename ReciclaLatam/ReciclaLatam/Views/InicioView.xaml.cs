@@ -33,6 +33,7 @@ namespace ReciclaLatam.Views
         public string maparuta;
         public double longitud;
         public int zonaRuta;
+        public string horazon;
         #endregion
 
         RecojosModels recojosModelsEnt;
@@ -199,6 +200,10 @@ namespace ReciclaLatam.Views
                 {
                     Application.Current.MainPage = new NosotrosView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
                 }
+                else if (NombreMenu == "Sugerencias")
+                {
+                    Application.Current.MainPage = new SugerenciasView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+                }
             }
         }
 
@@ -212,7 +217,7 @@ namespace ReciclaLatam.Views
            
             maparuta = recojosModelsEnt.hora_fin;
 
-            Application.Current.MainPage = new PuntosMapaView(zonaRuta, maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+            Application.Current.MainPage = new PuntosMapaView(horazon, zonaRuta, maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
         private void LinkFace(object sender, EventArgs e)
         {

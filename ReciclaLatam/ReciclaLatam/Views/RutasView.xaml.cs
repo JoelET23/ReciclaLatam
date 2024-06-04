@@ -112,7 +112,7 @@ namespace ReciclaLatam.Views
                     Address = item.CampoO,
                     Icon = (Device.RuntimePlatform == Device.Android) ? BitmapDescriptorFactory.FromBundle("ruta.png") : BitmapDescriptorFactory.FromView(new Image() { Source = "ruta.png" }),
                     Position = new Position(item.Latitud, item.Longitud),
-                    Tag = item.CampoO
+                    Tag = item.CampoT
                 };
                 map.Pins.Add(VehiclePinsUser);
             }
@@ -133,9 +133,11 @@ namespace ReciclaLatam.Views
         private void Map_PinClicked(object sender, PinClickedEventArgs e)
         {
             var p = e.Pin;
-            string tag = p.Tag.ToString();
+            string tag = p.Address.ToString();
+            string lbl = p.Label.ToString();
+            string gol = p.Tag.ToString();
 
-            Navigation.PushPopupAsync(new Popup.PopupMapa(tag));
+            Navigation.PushPopupAsync(new Popup.PopupMapa(tag, lbl));
 
         }
 

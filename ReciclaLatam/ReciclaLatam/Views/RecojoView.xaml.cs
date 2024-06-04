@@ -33,6 +33,7 @@ namespace ReciclaLatam.Views
         public double longitud;
 
         public string maparuta;
+        public string horazon;
         public int zonaRuta;
 
 
@@ -125,8 +126,9 @@ namespace ReciclaLatam.Views
 
             maparuta = model.hora_fin;
             zonaRuta = model.id_municipalidad;
+            horazon = model.hora_inicio;
 
-            Application.Current.MainPage = new PuntosMapaView(zonaRuta, maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+            Application.Current.MainPage = new PuntosMapaView(horazon, zonaRuta, maparuta, latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
         }
     }
 }

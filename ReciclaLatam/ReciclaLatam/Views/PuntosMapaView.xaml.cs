@@ -3,6 +3,8 @@ using Plugin.Geolocator;
 using ReciclaLatam.ApiRest;
 using ReciclaLatam.Models;
 using ReciclaLatam.ViewsModels;
+using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -38,6 +40,7 @@ namespace ReciclaLatam.Views
         public double longitud;
         public string maparuta;
         public int zonaRuta;
+        public string horazon;
 
         public double longmapfin;
         public double latimapfin;
@@ -50,7 +53,7 @@ namespace ReciclaLatam.Views
 
         public int index = 0;
 
-        public PuntosMapaView(int znrt, string maprt, double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
+        public PuntosMapaView(string zonhor, int znrt, string maprt, double l, string g, string ap, string dir, string ter, string nom, int id, string cor, string pas, string idmu, string tel, string fot, double lon)
         {
             InitializeComponent();
 
@@ -72,10 +75,12 @@ namespace ReciclaLatam.Views
             longitud = lon;
             maparuta = maprt;
             zonaRuta = znrt;
+            horazon = zonhor;
             #endregion
 
             RutaVehiculo();
             getRecojosMapas();
+
 
             var positions = new Position(latitud, longitud);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(positions, Distance.FromMeters(500)));
@@ -282,6 +287,11 @@ namespace ReciclaLatam.Views
         private void MenNot(object sender, EventArgs e)
         {
             Application.Current.MainPage = new NoticiasView(latitud, geolocalizacion, apellidos, direccion, termycond, nombres, usuario_id, correo, password, id_municipalidad, telefono, foto, longitud);
+        }
+
+        private void CloseFrm(object sender, EventArgs e)
+        {
+            FrameThn.IsVisible = false;
         }
     }
 }

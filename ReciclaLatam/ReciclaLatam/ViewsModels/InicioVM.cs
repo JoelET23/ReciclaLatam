@@ -49,6 +49,12 @@ namespace ReciclaLatam.ViewsModels
                     Id = 6,
                     Nombre = "Nosotros",
                     Imagen = "nosotros.png"
+                },
+                new MenuInicioModels
+                {
+                    Id = 7,
+                    Nombre = "Sugerencias",
+                    Imagen = "noticias.png"
                 }
             };
         }
